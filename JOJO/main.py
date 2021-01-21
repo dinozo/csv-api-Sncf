@@ -14,7 +14,8 @@ def manip_json(req):
 #manip_json(URL)
 
 def insert_stop(file):
-    dict_data = json.loads(file)
+    dict_data = json.loads(req.text)
+    print(dict_data)
     return dict_data
 
 
