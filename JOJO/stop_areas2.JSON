@@ -76,49 +76,6 @@
             "administrative_regions": [
                 {
                     "coord": {
-                        "lat": "50.23436",
-                        "lon": "7.996379"
-                    },
-                    "id": "admin:1187560extern",
-                    "insee": "",
-                    "label": "Venezuela",
-                    "level": 15,
-                    "name": "Venezuela",
-                    "zip_code": "8001"
-                },
-                {
-                    "coord": {
-                        "lat": "51.23436",
-                        "lon": "8.996379"
-                    },
-                    "id": "admin:5432693extern",
-                    "insee": "",
-                    "label": "Bresil",
-                    "level": 10,
-                    "name": "Bresil",
-                    "zip_code": ""
-                }
-            ],
-            "codes": [
-                {
-                    "type": "VE-VB-BR",
-                    "value": "0080-300520-BV"
-                }
-            ],
-            "coord": {
-                "lat": "50.24065",
-                "lon": "7.6990968"
-            },
-            "id": "stop_area:BRE:VE:90503914",
-            "label": "VENEZUELA",
-            "links": [],
-            "name": "VENEZUELA-BR",
-            "timezone": "Amerique/New-york"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
                         "lat": "49.23436",
                         "lon": "6.996379"
                     },

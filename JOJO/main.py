@@ -1,30 +1,74 @@
 import requests
 import json
-from stop_areas import my_data_dict
 
 URL = "https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com/media/file/txt/3fa48b7d-ce01-4268-8cbf-a3eecc8df7bb.txt"
 req = requests.get(URL)
 
-
-def manip_json():
-    raw_data = json.loads(req.text)
-    my_json = json.dumps(raw_data, sort_keys=True, indent=4)
-    with open("stop_areas.JSON", mode="w") as data:
-        data.write(my_json)
-    print(my_json)
+# fix uft-8 characters bugs
+raw_data = json.loads(req.text)
 
 
-# manip_json()
+def manip_json(text):
+    with open("stop_areas.JSON", mode="w", encoding='utf-8') as data:
+        json.dump(text, data, sort_keys=True, indent=4)
 
 def insert_stop(key):
-    # Creates stop_areas.py and construct a dictionary
-    # my_dict = req.text
-    # with open("stop_areas.py",mode="w") as data:
-    #     data.write(my_dict)
+    # model the new data
+    new_stop_area = {
+        "administrative_regions": [
+            {
+                "coord": {
+                    "lat": "50.23436",
+                    "lon": "7.996379"
+                },
+                "id": "admin:1187560extern",
+                "insee": "",
+                "label": "Venezuela",
+                "level": 15,
+                "name": "Venezuela",
+                "zip_code": "8001"
+            },
+            {
+                "coord": {
+                    "lat": "51.23436",
+                    "lon": "8.996379"
+                },
+                "id": "admin:5432693extern",
+                "insee": "",
+                "label": "Bresil",
+                "level": 10,
+                "name": "Bresil",
+                "zip_code": ""
+            }
+        ],
+        "codes": [
+            {
+                "type": "VE-VB-BR",
+                "value": "0080-300520-BV"
+            }
+        ],
+        "coord": {
+            "lat": "50.24065",
+            "lon": "7.6990968"
+        },
+        "id": "stop_area:BRE:VE:90503914",
+        "label": "VENEZUELA",
+        "links": [],
+        "name": "VENEZUELA-BR",
+        "timezone": "Amerique/New-york"
+    }
+    with open("stop_areas.JSON", mode="r") as file:
+        data = json.load(file)
+        data['stop_areas'].insert(0, new_stop_area)
+        manip_json(data)
+        print("operation succeded")
 
-    # Get the format of an stop area
+    # Creates stop_areas.py and construct a dictionary
+    # Get the format of an stop area, the first one
     # (my_data_dict[key][0])
-    print(my_data_dict[key][0].keys())
+    # print(my_data_dict[key][0].items())
+    # STOP AREAS is a list of dictionaries of administrative regions
+    # The keys are 'codes', 'name', 'links', 'coord', 'label', 'administrative_regions', 'timezone', 'id'
 
 
 insert_stop('stop_areas')
