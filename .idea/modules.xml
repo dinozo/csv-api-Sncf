@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/csv-api-Sncf.iml" filepath="$PROJECT_DIR$/.idea/csv-api-Sncf.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/csv.iml" filepath="$PROJECT_DIR$/.idea/csv.iml" />
+>>>>>>> d0086d28ad348f4afdd379efa1c933115532e092
     </modules>
   </component>
 </project>
