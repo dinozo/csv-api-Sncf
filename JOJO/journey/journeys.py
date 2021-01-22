@@ -18,16 +18,29 @@ req = requests.get(URL, headers=HEADERS)
     #json.dump(req.json(), file, sort_keys=True, indent=4)
 
 raw_data = req.json()
-new_data = []
+d = datetime.timedelta(seconds=0)
+print(f"There are {d.days} days, {str(d)[0]} hours, {str(d)[2:4]} minutes, {str(d)[5:7]} seconds")
+
 for data in raw_data['journeys']:
+    my_stops = []
+    my_departs = []
+    my_arrivals = []
     section = data['sections']
     stops = len(section)
     print(f"There are {stops} stops")
     for sec in section:
         if "stop_date_times" in sec:
-            stops = [new_data.append(stop["stop_point"]["label"]) for stop in sec["stop_date_times"]]
+            for stop in sec["stop_date_times"]:
+                arret = stop["stop_point"]["label"]
+                my_stops.append(arret)
+                print("----------------------------")
+                if stop['base_departure_date_time'] and stop['arrival_date_time']:
+                    arrival = stop['arrival_date_time']
+                    departure = stop['base_departure_date_time']
+                    my_arrivals.append(arrival)
+                    my_departs.append(departure)
 
-new_dict = {"Stops": new_data}
-
-df = panda.DataFrame(new_dict)
+my_new_data = {"Stops": my_stops, "departure time": my_departs, "arrival time": my_arrivals}
+df = panda.DataFrame(my_new_data)
 print(df)
+df.to_csv("journey/journey.csv")
