@@ -12,6 +12,10 @@ def manip_json(text):
     with open("stop_areas.JSON", mode="w", encoding='utf-8') as data:
         json.dump(text, data, sort_keys=True, indent=4)
 
+
+#manip_json(raw_data)
+
+
 def insert_stop(key):
     # model the new data
     new_stop_area = {
@@ -70,5 +74,4 @@ def insert_stop(key):
     # STOP AREAS is a list of dictionaries of administrative regions
     # The keys are 'codes', 'name', 'links', 'coord', 'label', 'administrative_regions', 'timezone', 'id'
 
-
-insert_stop('stop_areas')
+# insert_stop('stop_areas')

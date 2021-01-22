@@ -1,0 +1,8 @@
+https://docs.python.org/3/howto/unicode.html
+https://requests.readthedocs.io/en/master/user/quickstart/
+https://stackoverflow.com/questions/18337407/saving-utf-8-texts-with-json-dumps-as-utf8-not-as-u-escape-sequence
+https://datascience.stackexchange.com/questions/62348/how-to-save-api-data-into-csv-format
+https://stackoverflow.com/questions/48245517/read-json-output-into-pandas-dataframe
+https://www.geeksforgeeks.org/create-a-pandas-dataframe-from-lists/
+https://www.geeksforgeeks.org/indexing-and-selecting-data-with-pandas/
+https://pandas.pydata.org/pandas-docs/stable/reference/frame.html
