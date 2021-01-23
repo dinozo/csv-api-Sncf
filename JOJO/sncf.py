@@ -24,13 +24,18 @@ class Sncf:
 
 
     def display_stops(self):
+        new_data = []
+        regions = []
+        dicto = {}
         administrative_regions = []
         for areas in self.json_obj['stop_areas']:
             if 'administrative_regions' in areas:
-                print(areas['administrative_regions'])
-                print(areas['id'])
-                print("hola")
-            print("adios")
+                for admin_region in areas['administrative_regions']:
+                    regions.append(admin_region['name'])
+                dicto = {'administrative_regions': regions}
+                regions = []
+            else:
+                dicto['administrative_regions'] = "No administrative regions"
             # for codes in areas["codes"]:
             #     codes["type"]
             #     codes["value"]
@@ -41,5 +46,7 @@ class Sncf:
             # areas["links"]
             # areas["name"]
             # areas["timezone"]
+            new_data.append(dicto)
 
 
+        print(new_data)

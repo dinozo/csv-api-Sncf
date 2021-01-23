@@ -31,8 +31,11 @@ def make_dataframe():
                 dicto["Admin Regions"] = "No regions"
 
             new_data.append(dicto)
-
+    print(new_data)
     info = panda.DataFrame(new_data)
     info.to_csv("stop_areas.csv")
 
 
+    print(info)
+
+make_dataframe()
