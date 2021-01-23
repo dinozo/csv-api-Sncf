@@ -1,17 +1,13 @@
 import requests
 import json
+from sncf import Sncf
+import pprint
 
+sncf = Sncf()
+sncf.read_json("https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com/media/file/txt/3fa48b7d-ce01-4268-8cbf-a3eecc8df7bb.txt")
+sncf.display_stops()
 
-def manip_json(text):
-    URL = "https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com/media/file/txt/3fa48b7d-ce01-4268-8cbf-a3eecc8df7bb.txt"
-    req = requests.get(URL)
-    # fix uft-8 characters bugs
-    raw_data = json.loads(req.text)
-    with open("stop_areas.JSON", mode="w", encoding='utf-8') as data:
-        json.dump(text, data, sort_keys=True, indent=4)
-
-#manip_json(raw_data)
-
+'''
 def insert_stop(key):
     # model the new data
     new_stop_area = {
@@ -69,5 +65,6 @@ def insert_stop(key):
     # print(my_data_dict[key][0].items())
     # STOP AREAS is a list of dictionaries of administrative regions
     # The keys are 'codes', 'name', 'links', 'coord', 'label', 'administrative_regions', 'timezone', 'id'
+'''
 
 # insert_stop('stop_areas')
