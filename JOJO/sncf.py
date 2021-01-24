@@ -56,4 +56,5 @@ class Sncf:
     def create_csv(self, data: object, fichier: str) -> object:
         info = pandas.DataFrame(data)
         f_name = fichier + ".csv"
-        return info.to_csv(f_name)
+        info.to_csv(f_name)
+        return info
