@@ -3,9 +3,11 @@ import json
 import pprint
 import pandas
 
+
 class Sncf:
     def __init__(self):
         self.json_obj = ""
+        self.stops = ""
 
     def read_json(self, url):
         try:
@@ -20,8 +22,7 @@ class Sncf:
         except ConnectionError:
             print("Url not valid, not found or user not connected to the internet")
             raise
-        #return pprint.pprint(self.json_obj)
-
+        # return pprint.pprint(self.json_obj)
 
     def display_stops(self):
         new_data = []
@@ -35,11 +36,13 @@ class Sncf:
                 dicto = {'administrative_regions': regions}
                 regions = []
             else:
-                dicto['administrative_regions'] = "No administrative regions"
-            # for codes in areas["codes"]:
-            #     codes["type"]
-            #     codes["value"]
-            # areas["coord"]["lat"]0
+                dicto['administrative_regions'] = "N/A"
+            for codes in areas["codes"]:
+                c_type = codes["type"]
+                c_code =codes["value"]
+                code_final = [c_type, c_code]
+            dicto['codes'] = code_final
+            dicto['coord'] = areas["coord"]["lat"]
             # areas["coord"]["lon"]
             # areas["id"]
             # areas["label"]
@@ -47,6 +50,10 @@ class Sncf:
             # areas["name"]
             # areas["timezone"]
             new_data.append(dicto)
+        self.stops = new_data
+        return new_data
 
-
-        print(new_data)
+    def create_csv(self, data: object, fichier: str) -> object:
+        info = pandas.DataFrame(data)
+        f_name = fichier + ".csv"
+        return info.to_csv(f_name)

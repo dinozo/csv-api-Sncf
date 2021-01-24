@@ -5,7 +5,8 @@ import pprint
 
 sncf = Sncf()
 sncf.read_json("https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com/media/file/txt/3fa48b7d-ce01-4268-8cbf-a3eecc8df7bb.txt")
-sncf.display_stops()
+stops = sncf.display_stops()
+
 
 '''
 def insert_stop(key):

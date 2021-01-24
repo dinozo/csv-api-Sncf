@@ -3,7 +3,9 @@ https://requests.readthedocs.io/en/master/user/quickstart/
 https://stackoverflow.com/questions/18337407/saving-utf-8-texts-with-json-dumps-as-utf8-not-as-u-escape-sequence
 https://datascience.stackexchange.com/questions/62348/how-to-save-api-data-into-csv-format
 https://stackoverflow.com/questions/48245517/read-json-output-into-pandas-dataframe
+https://stackoverflow.com/questions/17839973/constructing-pandas-dataframe-from-values-in-variables-gives-valueerror-if-usi
 https://www.geeksforgeeks.org/create-a-pandas-dataframe-from-lists/
 https://www.geeksforgeeks.org/indexing-and-selecting-data-with-pandas/
 https://pandas.pydata.org/pandas-docs/stable/reference/frame.html
+https://stackoverflow.com/questions/25894039/python-dump-json-with-accents
 https://realpython.com/python-enumerate/#:~:text=Python's%20enumerate()%20lets%20you%20write%20Pythonic%20for%20loops%20when,to%20increment%20the%20counter%20yourself.
