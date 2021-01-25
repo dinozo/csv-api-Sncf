@@ -1,0 +1,26 @@
+,Stop name,Code,Code value,Latitude,Longitude,Admin Regions
+0,Saarbrucken-Hbf,CR-CI-CH,0080-253914-BV,49.24065,6.990968,"['SaarbrÃ¼cken', 'Mitte']"
+1,Frankfurt-am-Main-Hbf,CR-CI-CH,0080-110684-00,50.107216,8.66405,['Gallus']
+2,Mannheim-Hbf,CR-CI-CH,0080-140087-BV,49.479714,8.470079,['Schwetzingerstadt/Oststadt']
+3,Karlsruhe-Hbf,CR-CI-CH,0080-142281-BV,48.99439,8.400254,No regions
+4,Baden-Baden,CR-CI-CH,0080-142778-BV,48.790281,8.191165,No regions
+5,Appenweier,CR-CI-CH,0080-142893-BV,48.541326,7.973672,['Appenweier']
+6,Legelshurst,CR-CI-CH,0080-142901-00,48.558571,7.913724,['WillstÃ¤tt']
+7,Kork,CR-CI-CH,0080-142919-00,48.570017,7.874009,['Kehl']
+8,Augsburg-Hbf,CR-CI-CH,0080-021402-BV,48.365581,10.886756,No regions
+9,Port-Bou,CR-CI-CH,0071-793158-BV,42.424467,3.15786,['Portbou']
+10,Irun,CR-CI-CH,0087-677914-WE,43.339432,-1.801337,['Irun']
+11,Trier-Hbf,CR-CI-CH,0080-251819-BV,49.756761,6.652361,No regions
+12,Konz-Mitte,CR-CI-CH,0080-251850-BV,0.0,0.0,No regions
+13,Perl,CR-CI-CH,0080-251967-BV,0.0,0.0,No regions
+14,Pantin,CR-CI-CH,0087-113209-BV,48.897776,2.400426,['Pantin']
+15,Stuttgart,CR-CI-CH,0080-290346-BV,48.783622,9.180496,['Stuttgart-Mitte']
+16,Neustadt (Weinstr) Hbf,CR-CI-CH,0080-194035-BV,49.350034,8.140647,['Neustadt-Stadtmitte']
+17,Landau Hbf,CR-CI-CH,0080-194258-BV,49.1976,8.12557,No regions
+18,Vercelli,CR-CI-CH,0083-002451-00,45.329112,8.414824,['Vercelli']
+19,WINDEN PFALZ,CR-CI-CH,0080-194324-BV,49.095415,8.122376,['Winden']
+20,Kaiserslautern-Hbf,CR-CI-CH,0080-196980-BV,49.43628,7.768563,No regions
+21,Munchen-Hbf,CR-CI-CH,0080-203471-00,48.140325,11.560415,['Stadtbezirk 02 Ludwigsvorstadt-Isarvorstadt']
+22,Kehl,CR-CI-CH,0087-212910-WD,48.576486,7.808005,['Kehl']
+23,Offenburg,CR-CI-CH,0080-143099-BV,48.476447,7.946696,['Offenburg']
+24,Freiburg-Breisgau,CR-CI-CH,0080-143503-BV,47.997776,7.841564,No regions

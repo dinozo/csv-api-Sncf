@@ -1,17 +1,38 @@
-import requests
-import json
+from sncf import Sncf
 
-URL = "https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com/media/file/txt/3fa48b7d-ce01-4268-8cbf-a3eecc8df7bb.txt"
-req = requests.get(URL)
+# Create an instance of the class Sncf
+sncf = Sncf()
 
-# fix uft-8 characters bugs
-raw_data = json.loads(req.text)
+# Call the method read_json to do a get request to an determined api
+url = "https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com/media/file/txt/3fa48b7d-ce01-4268-8cbf-a3eecc8df7bb.txt"
+# sncf.read_json(url)
+
+# Call the display stops method to display all stops, coordinates, codes,
+# and administative regions and create an stops attribute
+# stops = sncf.display_stops()
+
+# Call the method create_csv to transfer the stops attribute from the last method into a CSV dataframe
+# x = sncf.create_csv(stops, "stop_areas")
+# print(x)
 
 
-def manip_json(text):
-    with open("stop_areas.JSON", mode="w", encoding='utf-8') as data:
-        json.dump(text, data, sort_keys=True, indent=4)
+# Get the stops from Paris GARE DE LYON to Lyon Perrache
 
+# From  Paris - Gare de Lyon
+depart = "stop_area:OCE:SA:87686006"
+# To Lyon - Perrache
+arrival = "stop_area:OCE:SA:87722025"
+# Call the metohod and will return the new data
+# my_journey = sncf.get_journey(depart, arrival)
+# print(my_journey)
+# post the journey into a CSV
+# sncf.create_csv(my_journey, "Journey")
+
+# Get the trains from Paris to Lyon entre 18h et 20h
+sncf.get_datetime()
+#sncf.get_trains_datetime(start=depart, stop=arrival)
+
+'''
 def insert_stop(key):
     # model the new data
     new_stop_area = {
@@ -69,6 +90,4 @@ def insert_stop(key):
     # print(my_data_dict[key][0].items())
     # STOP AREAS is a list of dictionaries of administrative regions
     # The keys are 'codes', 'name', 'links', 'coord', 'label', 'administrative_regions', 'timezone', 'id'
-
-
-insert_stop('stop_areas')
+'''
