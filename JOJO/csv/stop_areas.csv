@@ -1,0 +1,26 @@
+,id,codes-type,codes-value,Latitude,Longitude,label,links,name,timezone,Admin Regions
+0,stop_area:OCE:SA:80253914,['CR-CI-CH'],['0080-253914-BV'],49.24065,6.990968,Saarbrucken-Hbf (Saarbrücken),[],Saarbrucken-Hbf,Europe/Paris,"['Saarbrücken', 'Mitte']"
+1,stop_area:OCE:SA:80110684,['CR-CI-CH'],['0080-110684-00'],50.107216,8.66405,Frankfurt-am-Main-Hbf,[],Frankfurt-am-Main-Hbf,Europe/Paris,['Gallus']
+2,stop_area:OCE:SA:80140087,['CR-CI-CH'],['0080-140087-BV'],49.479714,8.470079,Mannheim-Hbf,[],Mannheim-Hbf,Europe/Paris,['Schwetzingerstadt/Oststadt']
+3,stop_area:OCE:SA:80142281,['CR-CI-CH'],['0080-142281-BV'],48.99439,8.400254,Karlsruhe-Hbf,[],Karlsruhe-Hbf,Europe/Paris,No regions
+4,stop_area:OCE:SA:80142778,['CR-CI-CH'],['0080-142778-BV'],48.790281,8.191165,Baden-Baden,[],Baden-Baden,Europe/Paris,No regions
+5,stop_area:OCE:SA:80142893,['CR-CI-CH'],['0080-142893-BV'],48.541326,7.973672,Appenweier (Appenweier),[],Appenweier,Europe/Paris,['Appenweier']
+6,stop_area:OCE:SA:80142901,['CR-CI-CH'],['0080-142901-00'],48.558571,7.913724,Legelshurst (Willstätt),[],Legelshurst,Europe/Paris,['Willstätt']
+7,stop_area:OCE:SA:80142919,['CR-CI-CH'],['0080-142919-00'],48.570017,7.874009,Kork (Kehl),[],Kork,Europe/Paris,['Kehl']
+8,stop_area:OCE:SA:80021402,['CR-CI-CH'],['0080-021402-BV'],48.365581,10.886756,Augsburg-Hbf,[],Augsburg-Hbf,Europe/Paris,No regions
+9,stop_area:OCE:SA:71793150,['CR-CI-CH'],['0071-793158-BV'],42.424467,3.15786,Port-Bou (Portbou),[],Port-Bou,Europe/Paris,['Portbou']
+10,stop_area:OCE:SA:71116000,['CR-CI-CH'],['0087-677914-WE'],43.339432,-1.801337,Irun (Irun),[],Irun,Europe/Paris,['Irun']
+11,stop_area:OCE:SA:80251819,['CR-CI-CH'],['0080-251819-BV'],49.756761,6.652361,Trier-Hbf,[],Trier-Hbf,Europe/Paris,No regions
+12,stop_area:OCE:SA:80251850,['CR-CI-CH'],['0080-251850-BV'],0.0,0.0,Konz-Mitte,[],Konz-Mitte,Europe/Paris,No regions
+13,stop_area:OCE:SA:80251967,['CR-CI-CH'],['0080-251967-BV'],0.0,0.0,Perl,[],Perl,Europe/Paris,No regions
+14,stop_area:OCE:SA:87113209,['CR-CI-CH'],['0087-113209-BV'],48.897776,2.400426,Pantin (Pantin),[],Pantin,Europe/Paris,['Pantin']
+15,stop_area:OCE:SA:80290346,['CR-CI-CH'],['0080-290346-BV'],48.783622,9.180496,Stuttgart,[],Stuttgart,Europe/Paris,['Stuttgart-Mitte']
+16,stop_area:OCE:SA:80194035,['CR-CI-CH'],['0080-194035-BV'],49.350034,8.140647,Neustadt (Weinstr) Hbf,[],Neustadt (Weinstr) Hbf,Europe/Paris,['Neustadt-Stadtmitte']
+17,stop_area:OCE:SA:80194258,['CR-CI-CH'],['0080-194258-BV'],49.1976,8.12557,Landau Hbf,[],Landau Hbf,Europe/Paris,No regions
+18,stop_area:OCE:SA:83002451,['CR-CI-CH'],['0083-002451-00'],45.329112,8.414824,Vercelli (Vercelli),[],Vercelli,Europe/Paris,['Vercelli']
+19,stop_area:OCE:SA:80194324,['CR-CI-CH'],['0080-194324-BV'],49.095415,8.122376,WINDEN PFALZ (Winden),[],WINDEN PFALZ,Europe/Paris,['Winden']
+20,stop_area:OCE:SA:80196980,['CR-CI-CH'],['0080-196980-BV'],49.43628,7.768563,Kaiserslautern-Hbf,[],Kaiserslautern-Hbf,Europe/Paris,No regions
+21,stop_area:OCE:SA:80203471,['CR-CI-CH'],['0080-203471-00'],48.140325,11.560415,Munchen-Hbf,[],Munchen-Hbf,Europe/Paris,['Stadtbezirk 02 Ludwigsvorstadt-Isarvorstadt']
+22,stop_area:OCE:SA:80142927,['CR-CI-CH'],['0087-212910-WD'],48.576486,7.808005,Kehl (Kehl),[],Kehl,Europe/Paris,['Kehl']
+23,stop_area:OCE:SA:80143099,['CR-CI-CH'],['0080-143099-BV'],48.476447,7.946696,Offenburg (Offenburg),[],Offenburg,Europe/Paris,['Offenburg']
+24,stop_area:OCE:SA:80143503,['CR-CI-CH'],['0080-143503-BV'],47.997776,7.841564,Freiburg-Breisgau,[],Freiburg-Breisgau,Europe/Paris,No regions
