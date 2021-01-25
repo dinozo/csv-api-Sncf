@@ -2,19 +2,21 @@ import requests
 import json
 import pandas
 import pprint
-
+import datetime
 
 class Sncf:
     def __init__(self):
         self.json_obj = ""
         self.stops = ""
         self.headers = {"Authorization": "0157b284-3cc3-4799-a1ab-79dc2761d274"}
+        self.links = []
+        self.datetime_now = self.get_datetime()
 
     def read_json(self, url):
         try:
             req = requests.get(url)
             self.json_obj = json.loads(req.text)
-            with open("stop_areas.JSON", mode="w+", encoding='utf-8') as data:
+            with open("Not_used_anymore/stop_areas.JSON", mode="w+", encoding='utf-8') as data:
                 json.dump(self.json_obj, data, sort_keys=True, indent=4, ensure_ascii=False)
             print("Json read")
         except FileNotFoundError:
@@ -57,16 +59,31 @@ class Sncf:
         return info
 
     def format_datetime(self, datetime):
-        for depart in datetime:
-            formatted = {
-                'year': depart[:4],
-                'month': depart[4:6],
-                'day': depart[6:8],
-                'hour': depart[9:11],
-                'minutes': depart[11:13],
-                'seconds': depart[13:15]
-            }
-        return formatted
+        #         'year': depart[:4],
+        #         'month': depart[4:6],
+        #         'day': depart[6:8],
+        #         'hour': depart[9:11],
+        #         'minutes': depart[11:13],
+        #         'seconds': depart[13:15]
+        time = f"{datetime[9:11]}h{datetime[11:13]}:{datetime[13:15]}"
+        return time
+
+    def get_datetime(self):
+        """ Outputs the current date and  hous into a format accepted by the api YYYYMMDDDTHHMMSS"""
+        # Format date into YYYYMMDD
+        d_date = str(datetime.datetime.now().date())
+        split = d_date.split("-")
+        f_date = "".join(split)
+
+        # Format Hour into HHMMSS
+        hour = datetime.datetime.now().time()
+        split_h = str(hour)
+        f_hour = split_h[:2]+split_h[3:5]+split_h[6:8]
+
+        #Formatted
+        f_datetime = f_date + "T" + f_hour
+        return f_datetime
+
 
     def get_journey(self, start, stop):
         url = f"https://api.sncf.com/v1/journeys?from={start}&to={stop}"
@@ -86,14 +103,18 @@ class Sncf:
                     for stop in sec["stop_date_times"]:
                         arret = stop["stop_point"]["label"]
                         my_stops.append(arret)
-                        if stop['base_departure_date_time'] and stop['arrival_date_time']:
-                            arrival = stop['arrival_date_time']
-                            departure = stop['base_departure_date_time']
+                        if stop['departure_date_time'] and stop['arrival_date_time']:
+                            arrival = self.format_datetime(stop['arrival_date_time'])
+                            departure = self.format_datetime(stop['departure_date_time'])
                             my_arrivals.append(arrival)
                             my_departs.append(departure)
         # format date time
+        my_new_data = {"Stops": my_stops, "departure": my_departs, "arrival": my_arrivals}
+        return my_new_data
 
-        my_new_data = {"Stops": my_stops, "departure time": my_departs, "arrival time": my_arrivals}
-        df = pandas.DataFrame(my_new_data)
-        print(df)
-        # df.to_csv("journey/journey.csv")
+    def get_trains_datetime(self, start:str, stop:str, from_time="", to_time=""):
+
+        endpoint = f"https://api.sncf.com/v1/coverage/sncf/journeys?to={stop}&datetime_represents=departure&from={start}&datetime=20210125T180000"
+        req = requests.get(endpoint, headers=self.headers)
+        raw_data = req.json()
+        print(raw_data['links'])

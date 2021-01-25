@@ -1,8 +1,7 @@
 import requests
-import json
 import datetime
 import pandas as panda
-from JOJO.csvmanip import HEADERS
+from JOJO.Not_used_anymore.csvmanip import HEADERS
 
 # From  Paris - Gare de Lyon
 depart = "stop_area:OCE:SA:87686006"
