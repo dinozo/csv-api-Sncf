@@ -132,7 +132,7 @@ class Sncf:
         #         'hour': depart[9:11],
         #         'minutes': depart[11:13],
         #         'seconds': depart[13:15]
-        time = f"{datetime[9:11]}h{datetime[11:13]}:{datetime[13:15]}"
+        time = f"{datetime[9:11]}h{datetime[11:13]}"
         return time
 
     def get_date(self, date=datetime.datetime.now().date()):
@@ -188,14 +188,8 @@ class Sncf:
     def get_all_journeys(self, api):
         raw_data = self.read_json(api)
         my_section_list = []
+        sep = {"section": "----", "id": "----","departure": "----", "arrival": "----", "duration": "----", "from": "----","to": "----", "type": "----","tranfers": "----"}
         for journey in raw_data['journeys']:
-            trajet = {
-                "depart": self.format_datetime(journey['departure_date_time']),
-                "arrive": self.format_datetime(journey['arrival_date_time']),
-                "transfers": journey['nb_transfers'],
-                "duration": self.my_duration(journey['duration']),
-                "type": journey['type'],
-            }
             # ----- now divide and treat each section.
             for count, section in enumerate(journey['sections']):
                 if section['type'] != 'crow_fly':
@@ -213,42 +207,34 @@ class Sncf:
                     else:
                         my_section["from"] = section['type']
                         my_section["to"] = section['type']
-
+                    my_section["type"] = journey['type']
+                    my_section["transfers"] = journey['nb_transfers']
+                    my_section["duration"] = self.my_duration(journey['duration'])
                     my_section_list.append(my_section)
             # ----  end of section
             break
         # -------- END OF JOURNEY ----------
-
         # # END OF FOR LOOP -------------
         # section_df = pandas.DataFrame(my_section_list)
         # left = pandas.DataFrame(trajet, index=[1])
         # print(left)
         # print(section_df)
-        data = {"journey": trajet, "sections": my_section_list}
-        df = pandas.DataFrame(data)
-        print(df)
-        return data
+        return my_section_list
 
     def get_trains_datetime(self, start: str, stop: str, from_time: str, to_time=240000):
         datetime_query = self.get_date() + from_time
         endpoint = f"https://api.sncf.com/v1/coverage/sncf/journeys?to={stop}&datetime_represents=departure&from={start}&datetime={datetime_query}"
         raw_data = self.read_json(endpoint, name="trains-datetime")
         links = [i['href'] for i in raw_data['links']]
-        info = []
-        section = []
+        all_data = []
         for link in links:
             try:
                 datetime_query = int(link[-6::])
                 if int(from_time) < datetime_query < to_time:
                     # FIX, the query is good, the function get_journey is NOT
                     data = self.get_all_journeys(api=link)
-                    info.append(data['journey'])
-                    section.extend(data['sections'])
-
+                    all_data.extend(data)
             except ValueError:
                 pass
-        journey = pandas.DataFrame(info)
-        print(journey)
-
-        sec = pandas.DataFrame(section)
-        print(sec)
+        df = pandas.DataFrame(data for data in all_data)
+        print(df)

@@ -30,11 +30,11 @@ arrival = "stop_area:OCE:SA:87722025"
 # sncf.create_csv(my_journey, "Journey")
 
 # Get the trains from Paris to Lyon entre 18h et 20h
-# date_only_today = sncf.date_only
-# #18 heures in format HHMMSS
-# hour_of_depart = "180000"
-# sncf.get_trains_datetime(start=depart, stop=arrival, from_time=hour_of_depart)
-
-sncf.get_all_journeys("https://api.navitia.io/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210126T183001")
-
-
+date_only_today = sncf.date_only
+#18 heures in format HHMMSS
+hour_of_depart = "180000"
+sncf.get_trains_datetime(start=depart, stop=arrival, from_time=hour_of_depart)
+#
+# sncf.get_all_journeys("https://api.navitia.io/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210126T183001")
+#
+#

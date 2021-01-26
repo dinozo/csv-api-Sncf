@@ -6,7 +6,7 @@
                 "value": 97091.1386812212
             }
         },
-        "current_datetime": "20210126T230712",
+        "current_datetime": "20210127T000206",
         "timezone": "Europe/Paris"
     },
     "disruptions": [],
@@ -14,7 +14,7 @@
     "feed_publishers": [],
     "journeys": [
         {
-            "arrival_date_time": "20210126T203900",
+            "arrival_date_time": "20210127T203900",
             "calendars": [
                 {
                     "active_periods": [
@@ -38,7 +38,7 @@
                 "unit": "gEC",
                 "value": 1338.9744
             },
-            "departure_date_time": "20210126T183000",
+            "departure_date_time": "20210127T183000",
             "distances": {
                 "bike": 0,
                 "car": 0,
@@ -64,28 +64,28 @@
             },
             "links": [
                 {
-                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&is_journey_schedules=True&datetime=20210126T183000&last_section_mode%5B%5D=walking&min_nb_journeys=5&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3AOUIGO-87686006&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3AOUIGO-87722025&from=stop_area%3AOCE%3ASA%3A87686006",
+                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&is_journey_schedules=True&datetime=20210127T183000&last_section_mode%5B%5D=walking&min_nb_journeys=5&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3AOUIGO-87686006&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3AOUIGO-87722025&from=stop_area%3AOCE%3ASA%3A87686006",
                     "rel": "same_journey_schedules",
                     "templated": false,
                     "type": "journeys"
                 },
                 {
-                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?count=1&first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&is_journey_schedules=True&datetime=20210126T183000&last_section_mode%5B%5D=walking&min_nb_journeys=1&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3AOUIGO-87686006&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3AOUIGO-87722025&from=stop_area%3AOCE%3ASA%3A87686006",
+                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?count=1&first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&is_journey_schedules=True&datetime=20210127T183000&last_section_mode%5B%5D=walking&min_nb_journeys=1&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3AOUIGO-87686006&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3AOUIGO-87722025&from=stop_area%3AOCE%3ASA%3A87686006",
                     "rel": "this_journey",
                     "templated": false,
                     "type": "journeys"
                 }
             ],
             "nb_transfers": 0,
-            "requested_date_time": "20210126T180000",
+            "requested_date_time": "20210127T180000",
             "sections": [
                 {
-                    "arrival_date_time": "20210126T183000",
+                    "arrival_date_time": "20210127T183000",
                     "co2_emission": {
                         "unit": "",
                         "value": 0.0
                     },
-                    "departure_date_time": "20210126T183000",
+                    "departure_date_time": "20210127T183000",
                     "duration": 0,
                     "from": {
                         "embedded_type": "stop_area",
@@ -132,7 +132,7 @@
                             "timezone": "Europe/Paris"
                         }
                     },
-                    "id": "SMLx4EvyJT7XZLKPGubcV3_0",
+                    "id": "vqobMHv86FyqmBdQJMUgud_0",
                     "links": [],
                     "mode": "walking",
                     "to": {
@@ -200,15 +200,15 @@
                     "additional_informations": [
                         "regular"
                     ],
-                    "arrival_date_time": "20210126T203900",
-                    "base_arrival_date_time": "20210126T203900",
-                    "base_departure_date_time": "20210126T183000",
+                    "arrival_date_time": "20210127T203900",
+                    "base_arrival_date_time": "20210127T203900",
+                    "base_departure_date_time": "20210127T183000",
                     "co2_emission": {
                         "unit": "gEC",
                         "value": 1338.9744
                     },
                     "data_freshness": "base_schedule",
-                    "departure_date_time": "20210126T183000",
+                    "departure_date_time": "20210127T183000",
                     "display_informations": {
                         "code": "",
                         "color": "000000",
@@ -337,10 +337,10 @@
                     "stop_date_times": [
                         {
                             "additional_informations": [],
-                            "arrival_date_time": "20210126T183000",
-                            "base_arrival_date_time": "20210126T183000",
-                            "base_departure_date_time": "20210126T183000",
-                            "departure_date_time": "20210126T183000",
+                            "arrival_date_time": "20210127T183000",
+                            "base_arrival_date_time": "20210127T183000",
+                            "base_departure_date_time": "20210127T183000",
+                            "departure_date_time": "20210127T183000",
                             "links": [],
                             "stop_point": {
                                 "coord": {
@@ -359,10 +359,10 @@
                         },
                         {
                             "additional_informations": [],
-                            "arrival_date_time": "20210126T202600",
-                            "base_arrival_date_time": "20210126T202600",
-                            "base_departure_date_time": "20210126T203100",
-                            "departure_date_time": "20210126T203100",
+                            "arrival_date_time": "20210127T202600",
+                            "base_arrival_date_time": "20210127T202600",
+                            "base_departure_date_time": "20210127T203100",
+                            "departure_date_time": "20210127T203100",
                             "links": [],
                             "stop_point": {
                                 "coord": {
@@ -381,10 +381,10 @@
                         },
                         {
                             "additional_informations": [],
-                            "arrival_date_time": "20210126T203900",
-                            "base_arrival_date_time": "20210126T203900",
-                            "base_departure_date_time": "20210126T203900",
-                            "departure_date_time": "20210126T203900",
+                            "arrival_date_time": "20210127T203900",
+                            "base_arrival_date_time": "20210127T203900",
+                            "base_departure_date_time": "20210127T203900",
+                            "departure_date_time": "20210127T203900",
                             "links": [],
                             "stop_point": {
                                 "coord": {
@@ -464,12 +464,12 @@
                     "type": "public_transport"
                 },
                 {
-                    "arrival_date_time": "20210126T203900",
+                    "arrival_date_time": "20210127T203900",
                     "co2_emission": {
                         "unit": "",
                         "value": 0.0
                     },
-                    "departure_date_time": "20210126T203900",
+                    "departure_date_time": "20210127T203900",
                     "duration": 0,
                     "from": {
                         "embedded_type": "stop_point",
@@ -530,7 +530,7 @@
                             }
                         }
                     },
-                    "id": "3FFpQ7r6tb4TANVxuoCvJT_0",
+                    "id": "C5RujJh7Qfn4NmbUN3BNfd_0",
                     "links": [],
                     "mode": "walking",
                     "to": {
@@ -591,25 +591,25 @@
     ],
     "links": [
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210126T183001",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210127T183001",
             "rel": "next",
             "templated": false,
             "type": "next"
         },
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210126T203859",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210127T203859",
             "rel": "prev",
             "templated": false,
             "type": "prev"
         },
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210126T000000",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210127T000000",
             "rel": "first",
             "templated": false,
             "type": "first"
         },
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210126T235959",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210127T235959",
             "rel": "last",
             "templated": false,
             "type": "last"
