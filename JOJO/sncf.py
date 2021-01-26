@@ -156,15 +156,14 @@ class Sncf:
 
                     my_section_list.append(my_section)
             # ----  end of section
-            section_df = pandas.DataFrame(my_section_list)
-            trajet['sections'] = section_df
             journey_list.append(trajet)
         # -------- END OF JOURNEY ----------
-            break
+
         # END OF FOR LOOP -------------
+        section_df = pandas.DataFrame(my_section_list)
         left = pandas.DataFrame(journey_list)
-        result = pandas.merge(left, section_df, how="inner", on=["key1", "key2"])
-        print(result)
+        print(left)
+        print(section_df)
 
 
     def get_trains_datetime(self, start: str, stop: str, from_time, to_time=240000):

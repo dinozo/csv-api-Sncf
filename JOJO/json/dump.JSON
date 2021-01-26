@@ -6,7 +6,7 @@
                 "value": 97091.1386812212
             }
         },
-        "current_datetime": "20210126T125957",
+        "current_datetime": "20210126T140907",
         "timezone": "Europe/Paris"
     },
     "disruptions": [],
@@ -132,7 +132,7 @@
                             "timezone": "Europe/Paris"
                         }
                     },
-                    "id": "k8aw2xGTEVimmc4m43F4b2_0",
+                    "id": "sFyNfig4E9ySJnbuqB4sSL_0",
                     "links": [],
                     "mode": "walking",
                     "to": {
@@ -932,7 +932,7 @@
                             }
                         }
                     },
-                    "id": "ZPoeGBcyy2BDdxFBqjofE5_0",
+                    "id": "jEFUdS6XvwY3NWGttdzL3U_0",
                     "links": [],
                     "mode": "walking",
                     "to": {
@@ -1109,7 +1109,7 @@
                             "timezone": "Europe/Paris"
                         }
                     },
-                    "id": "EEnzxUwYRLzPnnXrNANdK6_0",
+                    "id": "8inuhAHFMjVwd38kJkrEWG_0",
                     "links": [],
                     "mode": "walking",
                     "to": {
@@ -1507,7 +1507,7 @@
                             }
                         }
                     },
-                    "id": "Wc6uRymh5nxm3x5hgaP2ND_0",
+                    "id": "ykT4qMEWSEgkcMphaqRwmS_0",
                     "links": [],
                     "mode": "walking",
                     "to": {

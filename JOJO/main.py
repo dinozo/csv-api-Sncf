@@ -35,7 +35,9 @@ arrival = "stop_area:OCE:SA:87722025"
 # datetime_query = date_only_today + hour_of_depart
 # sncf.get_trains_datetime(start=depart, stop=arrival, from_time=datetime_query, to_time=200000)
 
-sncf.get_all_journeys("https://api.navitia.io/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210126T183001")
+# sncf.get_all_journeys("https://api.navitia.io/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210126T183001")
+#
+
 '''
 def insert_stop(key):
     # model the new data
