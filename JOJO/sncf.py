@@ -22,14 +22,12 @@ class Sncf:
             filename = "json/" + name + ".JSON"
             with open(filename, mode="w+", encoding='utf-8') as data:
                 json.dump(json_object, data, sort_keys=True, indent=4, ensure_ascii=False)
-            print("Json read")
+            return json_object
         except FileNotFoundError:
-            print("Error trying to read stop_area.JSON0")
-            raise
-        except ConnectionError:
+            print("Error trying to read file.JSON")
+        except requests.exceptions.ConnectionError:
+            raise ConnectionError
             print("Url not valid, not found or user not connected to the internet")
-            raise
-        return json_object
         # return pprint.pprint(self.json_obj)
 
     def display_stops(self):
@@ -55,6 +53,66 @@ class Sncf:
         return new_data
 
     def insert_stop(self):
+        '''
+        def insert_stop(key):
+            # model the new data
+            new_stop_area = {
+                "administrative_regions": [
+                    {
+                        "coord": {
+                            "lat": "50.23436",
+                            "lon": "7.996379"
+                        },
+                        "id": "admin:1187560extern",
+                        "insee": "",
+                        "label": "Venezuela",
+                        "level": 15,
+                        "name": "Venezuela",
+                        "zip_code": "8001"
+                    },
+                    {
+                        "coord": {
+                            "lat": "51.23436",
+                            "lon": "8.996379"
+                        },
+                        "id": "admin:5432693extern",
+                        "insee": "",
+                        "label": "Bresil",
+                        "level": 10,
+                        "name": "Bresil",
+                        "zip_code": ""
+                    }
+                ],
+                "codes": [
+                    {
+                        "type": "VE-VB-BR",
+                        "value": "0080-300520-BV"
+                    }
+                ],
+                "coord": {
+                    "lat": "50.24065",
+                    "lon": "7.6990968"
+                },
+                "id": "stop_area:BRE:VE:90503914",
+                "label": "VENEZUELA",
+                "links": [],
+                "name": "VENEZUELA-BR",
+                "timezone": "Amerique/New-york"
+            }
+            with open("stop_areas.JSON", mode="r") as file:
+                data = json.load(file)
+                data['stop_areas'].insert(0, new_stop_area)
+                manip_json(data)
+                print("operation succeded")
+
+            # Creates stop_areas.py and construct a dictionary
+            # Get the format of an stop area, the first one
+            # (my_data_dict[key][0])
+            # print(my_data_dict[key][0].items())
+            # STOP AREAS is a list of dictionaries of administrative regions
+            # The keys are 'codes', 'name', 'links', 'coord', 'label', 'administrative_regions', 'timezone', 'id'
+        '''
+
         pass
 
     def create_csv(self, data: dict, fichier: str) -> object:
@@ -62,6 +120,10 @@ class Sncf:
         f_name = fichier + ".csv"
         info.to_csv("csv/" + f_name)
         return info
+
+    def my_duration(self, seconds):
+        a = str(datetime.timedelta(seconds=seconds))[0:7]
+        return a
 
     def format_datetime(self, datetime):
         #         'year': depart[:4],
@@ -125,15 +187,13 @@ class Sncf:
 
     def get_all_journeys(self, api):
         raw_data = self.read_json(api)
-        i = 0
-        journey_list = []
         my_section_list = []
         for journey in raw_data['journeys']:
             trajet = {
-                "depart": journey['departure_date_time'],
-                "arrive": journey['arrival_date_time'],
+                "depart": self.format_datetime(journey['departure_date_time']),
+                "arrive": self.format_datetime(journey['arrival_date_time']),
                 "transfers": journey['nb_transfers'],
-                "duration": journey['duration'],
+                "duration": self.my_duration(journey['duration']),
                 "type": journey['type'],
             }
             # ----- now divide and treat each section.
@@ -142,9 +202,9 @@ class Sncf:
                     my_section = {
                         'Section': count,
                         'id': section['type'],
-                        'departure': section['departure_date_time'],
-                        'arrival': section['arrival_date_time'],
-                        'duration': section['duration']
+                        'departure': self.format_datetime(section['departure_date_time']),
+                        'arrival': self.format_datetime(section['arrival_date_time']),
+                        'duration': self.my_duration(section['duration'])
 
                     }
                     if "from" and "to" in section:
@@ -156,33 +216,39 @@ class Sncf:
 
                     my_section_list.append(my_section)
             # ----  end of section
-            journey_list.append(trajet)
+            break
         # -------- END OF JOURNEY ----------
 
-        # END OF FOR LOOP -------------
-        section_df = pandas.DataFrame(my_section_list)
-        left = pandas.DataFrame(journey_list)
-        print(left)
-        print(section_df)
+        # # END OF FOR LOOP -------------
+        # section_df = pandas.DataFrame(my_section_list)
+        # left = pandas.DataFrame(trajet, index=[1])
+        # print(left)
+        # print(section_df)
+        data = {"journey": trajet, "sections": my_section_list}
+        df = pandas.DataFrame(data)
+        print(df)
+        return data
 
-
-    def get_trains_datetime(self, start: str, stop: str, from_time, to_time=240000):
-        if not from_time:
-            from_time = self.datetime_now
-
-        endpoint = f"https://api.sncf.com/v1/coverage/sncf/journeys?to={stop}&datetime_represents=departure&from={start}&datetime={from_time}"
+    def get_trains_datetime(self, start: str, stop: str, from_time: str, to_time=240000):
+        datetime_query = self.get_date() + from_time
+        endpoint = f"https://api.sncf.com/v1/coverage/sncf/journeys?to={stop}&datetime_represents=departure&from={start}&datetime={datetime_query}"
         raw_data = self.read_json(endpoint, name="trains-datetime")
         links = [i['href'] for i in raw_data['links']]
-
+        info = []
+        section = []
         for link in links:
             try:
                 datetime_query = int(link[-6::])
-                if datetime_query > from_time and datetime_query < to_time:
-                    print(datetime_query)
+                if int(from_time) < datetime_query < to_time:
                     # FIX, the query is good, the function get_journey is NOT
-                    data = self.get_journey(start, stop, link=link)
-                    info = pandas.DataFrame(data)
-                    print(info)
+                    data = self.get_all_journeys(api=link)
+                    info.append(data['journey'])
+                    section.extend(data['sections'])
 
             except ValueError:
-                break
+                pass
+        journey = pandas.DataFrame(info)
+        print(journey)
+
+        sec = pandas.DataFrame(section)
+        print(sec)
