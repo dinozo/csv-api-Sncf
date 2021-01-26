@@ -15,7 +15,6 @@ sncf = Sncf()
 # x = sncf.create_csv(stops, "stop_areas")
 # print(x)
 
-
 # Get the stops from Paris GARE DE LYON to Lyon Perrache
 
 # From  Paris - Gare de Lyon
@@ -30,13 +29,13 @@ arrival = "stop_area:OCE:SA:87722025"
 # sncf.create_csv(my_journey, "Journey")
 
 # Get the trains from Paris to Lyon entre 18h et 20h
-date_only_today = sncf.date_only
-#18 heures in format HHMMSS
-hour_of_depart = "164500"
-datetime_query = date_only_today + hour_of_depart
+# date_only_today = sncf.date_only
+# #18 heures in format HHMMSS
+# hour_of_depart = "180000"
+# datetime_query = date_only_today + hour_of_depart
+# sncf.get_trains_datetime(start=depart, stop=arrival, from_time=datetime_query, to_time=200000)
 
-sncf.get_trains_datetime(start=depart, stop=arrival, from_time=datetime_query, to_time="")
-
+sncf.get_all_journeys("https://api.navitia.io/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210126T183001")
 '''
 def insert_stop(key):
     # model the new data

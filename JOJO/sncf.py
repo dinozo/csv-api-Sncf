@@ -73,13 +73,13 @@ class Sncf:
         time = f"{datetime[9:11]}h{datetime[11:13]}:{datetime[13:15]}"
         return time
 
-    def get_date(self,date=datetime.datetime.now().date()):
+    def get_date(self, date=datetime.datetime.now().date()):
         d_date = str(date)
         split = d_date.split("-")
         f_date = "".join(split)
-        return f_date+"T"
+        return f_date + "T"
 
-    def get_hour(self,hour=datetime.datetime.now().time()):
+    def get_hour(self, hour=datetime.datetime.now().time()):
         # Format Hour into HHMMSS
         split_h = str(hour)
         f_hour = split_h[:2] + split_h[3:5] + split_h[6:8]
@@ -123,7 +123,51 @@ class Sncf:
         my_new_data = {"Stops": my_stops, "arrival": my_arrivals, "departure": my_departs, "attente": my_attente}
         return my_new_data
 
-    def get_trains_datetime(self, start: str, stop: str, from_time, to_time=""):
+    def get_all_journeys(self, api):
+        raw_data = self.read_json(api)
+        i = 0
+        journey_list = []
+        my_section_list = []
+        for journey in raw_data['journeys']:
+            trajet = {
+                "depart": journey['departure_date_time'],
+                "arrive": journey['arrival_date_time'],
+                "transfers": journey['nb_transfers'],
+                "duration": journey['duration'],
+                "type": journey['type'],
+            }
+            # ----- now divide and treat each section.
+            for count, section in enumerate(journey['sections']):
+                if section['type'] != 'crow_fly':
+                    my_section = {
+                        'Section': count,
+                        'id': section['type'],
+                        'departure': section['departure_date_time'],
+                        'arrival': section['arrival_date_time'],
+                        'duration': section['duration']
+
+                    }
+                    if "from" and "to" in section:
+                        my_section['from'] = section['from']['name']
+                        my_section['to'] = section['to']['name']
+                    else:
+                        my_section["from"] = section['type']
+                        my_section["to"] = section['type']
+
+                    my_section_list.append(my_section)
+            # ----  end of section
+            section_df = pandas.DataFrame(my_section_list)
+            trajet['sections'] = section_df
+            journey_list.append(trajet)
+        # -------- END OF JOURNEY ----------
+            break
+        # END OF FOR LOOP -------------
+        left = pandas.DataFrame(journey_list)
+        result = pandas.merge(left, section_df, how="inner", on=["key1", "key2"])
+        print(result)
+
+
+    def get_trains_datetime(self, start: str, stop: str, from_time, to_time=240000):
         if not from_time:
             from_time = self.datetime_now
 
@@ -132,6 +176,14 @@ class Sncf:
         links = [i['href'] for i in raw_data['links']]
 
         for link in links:
-            data = self.get_journey(start, stop, link=link)
-            info = pandas.DataFrame(data)
-            print(info)
+            try:
+                datetime_query = int(link[-6::])
+                if datetime_query > from_time and datetime_query < to_time:
+                    print(datetime_query)
+                    # FIX, the query is good, the function get_journey is NOT
+                    data = self.get_journey(start, stop, link=link)
+                    info = pandas.DataFrame(data)
+                    print(info)
+
+            except ValueError:
+                break

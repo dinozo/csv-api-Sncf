@@ -6,7 +6,7 @@
                 "value": 97091.1386812212
             }
         },
-        "current_datetime": "20210125T163643",
+        "current_datetime": "20210126T104113",
         "timezone": "Europe/Paris"
     },
     "disruptions": [],
@@ -14,37 +14,23 @@
     "feed_publishers": [],
     "journeys": [
         {
-            "arrival_date_time": "20210125T190900",
+            "arrival_date_time": "20210126T203900",
             "calendars": [
                 {
                     "active_periods": [
                         {
-                            "begin": "20210115",
-                            "end": "20210208"
-                        },
-                        {
-                            "begin": "20210301",
-                            "end": "20210308"
-                        }
-                    ],
-                    "exceptions": [
-                        {
-                            "datetime": "20210118",
-                            "type": "add"
-                        },
-                        {
-                            "datetime": "20210125",
-                            "type": "add"
+                            "begin": "20210105",
+                            "end": "20210328"
                         }
                     ],
                     "week_pattern": {
                         "friday": true,
-                        "monday": false,
-                        "saturday": false,
+                        "monday": true,
+                        "saturday": true,
                         "sunday": true,
-                        "thursday": false,
-                        "tuesday": false,
-                        "wednesday": false
+                        "thursday": true,
+                        "tuesday": true,
+                        "wednesday": true
                     }
                 }
             ],
@@ -52,7 +38,7 @@
                 "unit": "gEC",
                 "value": 1338.9744
             },
-            "departure_date_time": "20210125T170000",
+            "departure_date_time": "20210126T183000",
             "distances": {
                 "bike": 0,
                 "car": 0,
@@ -78,28 +64,28 @@
             },
             "links": [
                 {
-                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&is_journey_schedules=True&datetime=20210125T170000&last_section_mode%5B%5D=walking&min_nb_journeys=5&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87722025&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87686006&from=stop_area%3AOCE%3ASA%3A87686006",
+                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&is_journey_schedules=True&datetime=20210126T183000&last_section_mode%5B%5D=walking&min_nb_journeys=5&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3AOUIGO-87686006&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3AOUIGO-87722025&from=stop_area%3AOCE%3ASA%3A87686006",
                     "rel": "same_journey_schedules",
                     "templated": false,
                     "type": "journeys"
                 },
                 {
-                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?count=1&first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&is_journey_schedules=True&datetime=20210125T170000&last_section_mode%5B%5D=walking&min_nb_journeys=1&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87722025&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87686006&from=stop_area%3AOCE%3ASA%3A87686006",
+                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?count=1&first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&is_journey_schedules=True&datetime=20210126T183000&last_section_mode%5B%5D=walking&min_nb_journeys=1&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3AOUIGO-87686006&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3AOUIGO-87722025&from=stop_area%3AOCE%3ASA%3A87686006",
                     "rel": "this_journey",
                     "templated": false,
                     "type": "journeys"
                 }
             ],
             "nb_transfers": 0,
-            "requested_date_time": "20210125T164500",
+            "requested_date_time": "20210126T180000",
             "sections": [
                 {
-                    "arrival_date_time": "20210125T170000",
+                    "arrival_date_time": "20210126T183000",
                     "co2_emission": {
                         "unit": "",
                         "value": 0.0
                     },
-                    "departure_date_time": "20210125T170000",
+                    "departure_date_time": "20210126T183000",
                     "duration": 0,
                     "from": {
                         "embedded_type": "stop_area",
@@ -146,12 +132,12 @@
                             "timezone": "Europe/Paris"
                         }
                     },
-                    "id": "e6KdRUpnXvrGT43XAKdye5_0",
+                    "id": "asp8iB9vkRxJrxx6usuAyP_0",
                     "links": [],
                     "mode": "walking",
                     "to": {
                         "embedded_type": "stop_point",
-                        "id": "stop_point:OCE:SP:TGVINOUI-87686006",
+                        "id": "stop_point:OCE:SP:OUIGO-87686006",
                         "name": "Paris-Gare-de-Lyon (Paris)",
                         "quality": 0,
                         "stop_point": {
@@ -177,7 +163,7 @@
                             "fare_zone": {
                                 "name": "0"
                             },
-                            "id": "stop_point:OCE:SP:TGVINOUI-87686006",
+                            "id": "stop_point:OCE:SP:OUIGO-87686006",
                             "label": "Paris-Gare-de-Lyon (Paris)",
                             "links": [],
                             "name": "Paris-Gare-de-Lyon",
@@ -214,35 +200,35 @@
                     "additional_informations": [
                         "regular"
                     ],
-                    "arrival_date_time": "20210125T190900",
-                    "base_arrival_date_time": "20210125T190900",
-                    "base_departure_date_time": "20210125T170000",
+                    "arrival_date_time": "20210126T203900",
+                    "base_arrival_date_time": "20210126T203900",
+                    "base_departure_date_time": "20210126T183000",
                     "co2_emission": {
                         "unit": "gEC",
                         "value": 1338.9744
                     },
                     "data_freshness": "base_schedule",
-                    "departure_date_time": "20210125T170000",
+                    "departure_date_time": "20210126T183000",
                     "display_informations": {
                         "code": "",
                         "color": "000000",
-                        "commercial_mode": "TGV INOUI",
+                        "commercial_mode": "OUIGO",
                         "description": "",
                         "direction": "Lyon-Perrache (Lyon)",
                         "equipments": [],
-                        "headsign": "6687",
-                        "label": "Paris <> Lyon <> Saint Etienne",
+                        "headsign": "7805",
+                        "label": "SUD-EST",
                         "links": [],
-                        "name": "Paris <> Lyon <> Saint Etienne",
+                        "name": "SUD-EST",
                         "network": "SNCF",
                         "physical_mode": "Train grande vitesse",
                         "text_color": "FFFFFF",
-                        "trip_short_name": "6687"
+                        "trip_short_name": "7805"
                     },
                     "duration": 7740,
                     "from": {
                         "embedded_type": "stop_point",
-                        "id": "stop_point:OCE:SP:TGVINOUI-87686006",
+                        "id": "stop_point:OCE:SP:OUIGO-87686006",
                         "name": "Paris-Gare-de-Lyon (Paris)",
                         "quality": 0,
                         "stop_point": {
@@ -268,7 +254,7 @@
                             "fare_zone": {
                                 "name": "0"
                             },
-                            "id": "stop_point:OCE:SP:TGVINOUI-87686006",
+                            "id": "stop_point:OCE:SP:OUIGO-87686006",
                             "label": "Paris-Gare-de-Lyon (Paris)",
                             "links": [],
                             "name": "Paris-Gare-de-Lyon",
@@ -324,19 +310,19 @@
                     "id": "section_0_0",
                     "links": [
                         {
-                            "id": "vehicle_journey:OCE:SN006687F35035-11592_dst_1",
+                            "id": "vehicle_journey:OCE:SN007805F04004_dst_1",
                             "type": "vehicle_journey"
                         },
                         {
-                            "id": "line:OCE:138",
+                            "id": "line:OCE:1041887",
                             "type": "line"
                         },
                         {
-                            "id": "route:OCE:138-TGVINOUI-87686006-87722025",
+                            "id": "route:OCE:1041887-OUIGO-87686006-87722025",
                             "type": "route"
                         },
                         {
-                            "id": "commercial_mode:INOUI",
+                            "id": "commercial_mode:ouigo",
                             "type": "commercial_mode"
                         },
                         {
@@ -351,10 +337,10 @@
                     "stop_date_times": [
                         {
                             "additional_informations": [],
-                            "arrival_date_time": "20210125T170000",
-                            "base_arrival_date_time": "20210125T170000",
-                            "base_departure_date_time": "20210125T170000",
-                            "departure_date_time": "20210125T170000",
+                            "arrival_date_time": "20210126T183000",
+                            "base_arrival_date_time": "20210126T183000",
+                            "base_departure_date_time": "20210126T183000",
+                            "departure_date_time": "20210126T183000",
                             "links": [],
                             "stop_point": {
                                 "coord": {
@@ -365,7 +351,7 @@
                                 "fare_zone": {
                                     "name": "0"
                                 },
-                                "id": "stop_point:OCE:SP:TGVINOUI-87686006",
+                                "id": "stop_point:OCE:SP:OUIGO-87686006",
                                 "label": "Paris-Gare-de-Lyon (Paris)",
                                 "links": [],
                                 "name": "Paris-Gare-de-Lyon"
@@ -373,10 +359,10 @@
                         },
                         {
                             "additional_informations": [],
-                            "arrival_date_time": "20210125T185600",
-                            "base_arrival_date_time": "20210125T185600",
-                            "base_departure_date_time": "20210125T190100",
-                            "departure_date_time": "20210125T190100",
+                            "arrival_date_time": "20210126T202600",
+                            "base_arrival_date_time": "20210126T202600",
+                            "base_departure_date_time": "20210126T203100",
+                            "departure_date_time": "20210126T203100",
                             "links": [],
                             "stop_point": {
                                 "coord": {
@@ -387,7 +373,7 @@
                                 "fare_zone": {
                                     "name": "0"
                                 },
-                                "id": "stop_point:OCE:SP:TGVINOUI-87723197",
+                                "id": "stop_point:OCE:SP:OUIGO-87723197",
                                 "label": "Lyon-Part-Dieu (Lyon)",
                                 "links": [],
                                 "name": "Lyon-Part-Dieu"
@@ -395,10 +381,10 @@
                         },
                         {
                             "additional_informations": [],
-                            "arrival_date_time": "20210125T190900",
-                            "base_arrival_date_time": "20210125T190900",
-                            "base_departure_date_time": "20210125T190900",
-                            "departure_date_time": "20210125T190900",
+                            "arrival_date_time": "20210126T203900",
+                            "base_arrival_date_time": "20210126T203900",
+                            "base_departure_date_time": "20210126T203900",
+                            "departure_date_time": "20210126T203900",
                             "links": [],
                             "stop_point": {
                                 "coord": {
@@ -409,7 +395,7 @@
                                 "fare_zone": {
                                     "name": "0"
                                 },
-                                "id": "stop_point:OCE:SP:TGVINOUI-87722025",
+                                "id": "stop_point:OCE:SP:OUIGO-87722025",
                                 "label": "Lyon-Perrache (Lyon)",
                                 "links": [],
                                 "name": "Lyon-Perrache"
@@ -418,7 +404,7 @@
                     ],
                     "to": {
                         "embedded_type": "stop_point",
-                        "id": "stop_point:OCE:SP:TGVINOUI-87722025",
+                        "id": "stop_point:OCE:SP:OUIGO-87722025",
                         "name": "Lyon-Perrache (Lyon)",
                         "quality": 0,
                         "stop_point": {
@@ -444,7 +430,7 @@
                             "fare_zone": {
                                 "name": "0"
                             },
-                            "id": "stop_point:OCE:SP:TGVINOUI-87722025",
+                            "id": "stop_point:OCE:SP:OUIGO-87722025",
                             "label": "Lyon-Perrache (Lyon)",
                             "links": [],
                             "name": "Lyon-Perrache",
@@ -478,16 +464,16 @@
                     "type": "public_transport"
                 },
                 {
-                    "arrival_date_time": "20210125T190900",
+                    "arrival_date_time": "20210126T203900",
                     "co2_emission": {
                         "unit": "",
                         "value": 0.0
                     },
-                    "departure_date_time": "20210125T190900",
+                    "departure_date_time": "20210126T203900",
                     "duration": 0,
                     "from": {
                         "embedded_type": "stop_point",
-                        "id": "stop_point:OCE:SP:TGVINOUI-87722025",
+                        "id": "stop_point:OCE:SP:OUIGO-87722025",
                         "name": "Lyon-Perrache (Lyon)",
                         "quality": 0,
                         "stop_point": {
@@ -513,7 +499,7 @@
                             "fare_zone": {
                                 "name": "0"
                             },
-                            "id": "stop_point:OCE:SP:TGVINOUI-87722025",
+                            "id": "stop_point:OCE:SP:OUIGO-87722025",
                             "label": "Lyon-Perrache (Lyon)",
                             "links": [],
                             "name": "Lyon-Perrache",
@@ -544,7 +530,7 @@
                             }
                         }
                     },
-                    "id": "Moivk3oSKf6EHTM4GoQgjS_0",
+                    "id": "H4CmqgyvXQ23UvEs5CppoZ_0",
                     "links": [],
                     "mode": "walking",
                     "to": {
@@ -605,25 +591,25 @@
     ],
     "links": [
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210125T170001",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210126T183001",
             "rel": "next",
             "templated": false,
             "type": "next"
         },
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210125T190859",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210126T203859",
             "rel": "prev",
             "templated": false,
             "type": "prev"
         },
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210125T000000",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210126T000000",
             "rel": "first",
             "templated": false,
             "type": "first"
         },
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210125T235959",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210126T235959",
             "rel": "last",
             "templated": false,
             "type": "last"
