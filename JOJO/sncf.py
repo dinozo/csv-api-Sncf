@@ -4,6 +4,7 @@ import pandas
 import time
 import pprint
 import datetime
+import os
 
 
 class Sncf:
@@ -15,12 +16,12 @@ class Sncf:
         self.datetime_now = self.get_date() + self.get_hour()
         self.date_only = self.get_date()
 
-    def read_json(self, url, name="dump"):
+    def read_json(self, url, name="dump", mode="w+"):
         try:
             req = requests.get(url, headers=self.headers)
             json_object = json.loads(req.text)
             filename = "json/" + name + ".JSON"
-            with open(filename, mode="w+", encoding='utf-8') as data:
+            with open(filename, mode=mode, encoding='utf-8') as data:
                 json.dump(json_object, data, sort_keys=True, indent=4, ensure_ascii=False)
             return json_object
         except FileNotFoundError:
@@ -30,9 +31,9 @@ class Sncf:
             print("Url not valid, not found or user not connected to the internet")
         # return pprint.pprint(self.json_obj)
 
-    def display_stops(self):
+    def display_stops(self, json_obj):
         new_data = []
-        for areas in self.json_obj['stop_areas']:
+        for areas in json_obj['stop_areas']:
             dicto = {
                 'id': areas["id"],
                 'codes-type': [codes["type"] for codes in areas["codes"]],
@@ -50,6 +51,29 @@ class Sncf:
                 dicto["Admin Regions"] = "No regions"
             new_data.append(dicto)
         self.stops = new_data
+        return new_data
+
+    def display_all_stops(self, json_obj):
+        new_data = []
+        for objeto in json_obj:
+            for areas in objeto['stop_areas']:
+                dicto = {
+                    'id': areas["id"],
+                    'codes-type': [codes["type"] for codes in areas["codes"]],
+                    'codes-value': [codes["value"] for codes in areas["codes"]],
+                    'Latitude': areas["coord"]["lat"],
+                    'Longitude': areas["coord"]["lon"],
+                    'label': areas["label"],
+                    'links': areas["links"],
+                    'name': areas["name"],
+                    'timezone': areas["timezone"],
+                }
+                if 'administrative_regions' in areas:
+                    dicto["admin-regions"] = [regions['name'] for regions in areas['administrative_regions']]
+                else:
+                    dicto["admin-regions"] = "No regions"
+                new_data.append(dicto)
+            self.stops = new_data
         return new_data
 
     def insert_stop(self):
@@ -149,8 +173,8 @@ class Sncf:
 
     def get_attente(self, arrival, depart):
         # process arrival 
-        a = datetime.datetime.strptime(arrival, "%Hh%M:%S")
-        d = datetime.datetime.strptime(depart, "%Hh%M:%S")
+        a = datetime.datetime.strptime(arrival, "%Hh%M")
+        d = datetime.datetime.strptime(depart, "%Hh%M")
         diff = (d - a).total_seconds()
         attente = time.strftime("%Mmin", time.gmtime(diff))
         return attente
@@ -188,7 +212,8 @@ class Sncf:
     def get_all_journeys(self, api):
         raw_data = self.read_json(api)
         my_section_list = []
-        sep = {"section": "----", "id": "----","departure": "----", "arrival": "----", "duration": "----", "from": "----","to": "----", "type": "----","tranfers": "----"}
+        sep = {"section": "----", "id": "----", "departure": "----", "arrival": "----", "duration": "----",
+               "from": "----", "to": "----", "type": "----", "tranfers": "----"}
         for journey in raw_data['journeys']:
             # ----- now divide and treat each section.
             for count, section in enumerate(journey['sections']):
@@ -238,3 +263,34 @@ class Sncf:
                 pass
         df = pandas.DataFrame(data for data in all_data)
         print(df)
+
+    def get_all_stop_areas(self):
+        num = 1
+        if os.path.isfile("json/all_stop_areas.JSON"):
+            print("exist")
+            with open("json/all_stop_areas.JSON") as file:
+                raw_data = json.load(file)
+            new_data = self.display_all_stops(raw_data)
+            if os.path.isfile("csv/all_stop_areas.csv"):
+                print("exist")
+            else:
+                df = pandas.DataFrame(new_data)
+                df.to_csv("csv/all_stop_areas.csv")
+        else:
+            all_request = []
+            for i in range(1, 5):
+                api_url = "https://api.sncf.com/v1/coverage/sncf/stop_areas?count=1000&start_page=" + str(i)
+                req = requests.get(api_url, headers=self.headers)
+                all_request.append(req.json())
+            filename = "json/all_stop_areas.JSON"
+            with open(filename, mode="a", encoding='utf-8') as data:
+                json.dump(all_request, data, sort_keys=True, indent=4, ensure_ascii=False)
+
+        # new_data = self.display_stops(raw_data)
+        # print(new_data)
+        # # self.create_csv(new_data,"all_stops")
+
+    def search_stop_area(self,gare):
+        read = pandas.read_csv("csv/all_stop_areas.csv")
+        query = read[read["name"] == gare.capitalize()]
+        return query['id'].values[0]
