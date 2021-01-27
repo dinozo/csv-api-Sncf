@@ -5,7 +5,13 @@ import time
 import pprint
 import datetime
 import os
+import logging
+import pathlib
 
+logfile = pathlib.Path(f'{os.getcwd()}/logs/logs.log')
+logging.basicConfig(filename=logfile, format='%(asctime)s: %(levelname)s: %(message)s', level=logging.DEBUG,
+                    datefmt='[%Y-%m-%d %H:%M:%S]')
+logging.info("Import of modules succeded")
 
 class Sncf:
     def __init__(self):
@@ -30,6 +36,11 @@ class Sncf:
             raise ConnectionError
             print("Url not valid, not found or user not connected to the internet")
         # return pprint.pprint(self.json_obj)
+
+    def pprint_json(self, url):
+        req = requests.get(url, headers=self.headers)
+        obj = req.json()
+        pprint.pprint(obj)
 
     def display_stops(self, json_obj):
         new_data = []

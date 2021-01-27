@@ -1,0 +1,34 @@
+[2021-01-27 12:40:23]: INFO: Import of modules succeded
+[2021-01-27 12:43:20]: INFO: Import of modules succeded
+[2021-01-27 12:43:25]: DEBUG: Starting new HTTPS connection (1): simplonline-v3-prod.s3.eu-west-3.amazonaws.com:443
+[2021-01-27 12:43:25]: DEBUG: https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com:443 "GET /media/file/txt/3fa48b7d-ce01-4268-8cbf-a3eecc8df7bb.txt HTTP/1.1" 400 None
+[2021-01-27 12:43:58]: INFO: Import of modules succeded
+[2021-01-27 12:44:02]: DEBUG: Starting new HTTPS connection (1): simplonline-v3-prod.s3.eu-west-3.amazonaws.com:443
+[2021-01-27 12:44:03]: DEBUG: https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com:443 "GET /media/file/txt/3fa48b7d-ce01-4268-8cbf-a3eecc8df7bb.txt HTTP/1.1" 400 None
+[2021-01-27 12:45:39]: INFO: Import of modules succeded
+[2021-01-27 12:45:43]: DEBUG: Starting new HTTPS connection (1): simplonline-v3-prod.s3.eu-west-3.amazonaws.com:443
+[2021-01-27 12:45:43]: DEBUG: https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com:443 "GET /media/file/txt/3fa48b7d-ce01-4268-8cbf-a3eecc8df7bb.txt HTTP/1.1" 400 None
+[2021-01-27 12:46:19]: INFO: Import of modules succeded
+[2021-01-27 12:46:23]: DEBUG: Starting new HTTPS connection (1): simplonline-v3-prod.s3.eu-west-3.amazonaws.com:443
+[2021-01-27 12:46:23]: DEBUG: https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com:443 "GET /media/file/txt/3fa48b7d-ce01-4268-8cbf-a3eecc8df7bb.txt HTTP/1.1" 400 None
+[2021-01-27 12:53:17]: INFO: Import of modules succeded
+[2021-01-27 12:53:23]: DEBUG: Starting new HTTPS connection (1): api.sncf.com:443
+[2021-01-27 12:53:24]: DEBUG: https://api.sncf.com:443 "GET /v1/coverage/sncf/stop_areas HTTP/1.1" 200 2499
+[2021-01-27 12:54:25]: INFO: Import of modules succeded
+[2021-01-27 12:54:29]: DEBUG: Starting new HTTPS connection (1): api.sncf.com:443
+[2021-01-27 12:54:29]: DEBUG: https://api.sncf.com:443 "GET /v1/coverage/sncf/stop_areas HTTP/1.1" 200 2499
+[2021-01-27 12:54:57]: INFO: Import of modules succeded
+[2021-01-27 12:54:59]: DEBUG: Starting new HTTPS connection (1): api.sncf.com:443
+[2021-01-27 12:54:59]: DEBUG: https://api.sncf.com:443 "GET /v1/coverage/sncf/stop_areas HTTP/1.1" 200 2499
+[2021-01-27 12:55:48]: INFO: Import of modules succeded
+[2021-01-27 12:56:12]: INFO: Import of modules succeded
+[2021-01-27 12:56:15]: DEBUG: Starting new HTTPS connection (1): api.sncf.com:443
+[2021-01-27 12:56:15]: DEBUG: https://api.sncf.com:443 "GET /v1/coverage/sncf/stop_areas HTTP/1.1" 200 2499
+[2021-01-27 13:59:19]: INFO: Import of modules succeded
+[2021-01-27 13:59:26]: DEBUG: Starting new HTTPS connection (1): api.sncf.com:443
+[2021-01-27 13:59:31]: DEBUG: https://api.sncf.com:443 "GET /v1/coverage/sncf/stop_areas HTTP/1.1" 200 2499
+[2021-01-27 13:59:45]: INFO: Import of modules succeded
+[2021-01-27 13:59:48]: DEBUG: Starting new HTTPS connection (1): api.sncf.com:443
+[2021-01-27 13:59:51]: DEBUG: https://api.sncf.com:443 "GET /v1/coverage/sncf/stop_areas HTTP/1.1" 200 2499
+[2021-01-27 13:59:54]: DEBUG: Starting new HTTPS connection (1): api.sncf.com:443
+[2021-01-27 13:59:58]: DEBUG: https://api.sncf.com:443 "GET /v1/coverage/sncf/stop_areas HTTP/1.1" 200 2496
