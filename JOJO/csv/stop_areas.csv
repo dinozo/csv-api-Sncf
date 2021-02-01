@@ -1,26 +1,26 @@
 ,id,codes-type,codes-value,Latitude,Longitude,label,links,name,timezone,Admin Regions
-0,stop_area:OCE:SA:80253914,['CR-CI-CH'],['0080-253914-BV'],49.24065,6.990968,Saarbrucken-Hbf (Saarbrücken),[],Saarbrucken-Hbf,Europe/Paris,"['Saarbrücken', 'Mitte']"
-1,stop_area:OCE:SA:80110684,['CR-CI-CH'],['0080-110684-00'],50.107216,8.66405,Frankfurt-am-Main-Hbf,[],Frankfurt-am-Main-Hbf,Europe/Paris,['Gallus']
-2,stop_area:OCE:SA:80140087,['CR-CI-CH'],['0080-140087-BV'],49.479714,8.470079,Mannheim-Hbf,[],Mannheim-Hbf,Europe/Paris,['Schwetzingerstadt/Oststadt']
-3,stop_area:OCE:SA:80142281,['CR-CI-CH'],['0080-142281-BV'],48.99439,8.400254,Karlsruhe-Hbf,[],Karlsruhe-Hbf,Europe/Paris,No regions
-4,stop_area:OCE:SA:80142778,['CR-CI-CH'],['0080-142778-BV'],48.790281,8.191165,Baden-Baden,[],Baden-Baden,Europe/Paris,No regions
-5,stop_area:OCE:SA:80142893,['CR-CI-CH'],['0080-142893-BV'],48.541326,7.973672,Appenweier (Appenweier),[],Appenweier,Europe/Paris,['Appenweier']
-6,stop_area:OCE:SA:80142901,['CR-CI-CH'],['0080-142901-00'],48.558571,7.913724,Legelshurst (Willstätt),[],Legelshurst,Europe/Paris,['Willstätt']
-7,stop_area:OCE:SA:80142919,['CR-CI-CH'],['0080-142919-00'],48.570017,7.874009,Kork (Kehl),[],Kork,Europe/Paris,['Kehl']
-8,stop_area:OCE:SA:80021402,['CR-CI-CH'],['0080-021402-BV'],48.365581,10.886756,Augsburg-Hbf,[],Augsburg-Hbf,Europe/Paris,No regions
-9,stop_area:OCE:SA:71793150,['CR-CI-CH'],['0071-793158-BV'],42.424467,3.15786,Port-Bou (Portbou),[],Port-Bou,Europe/Paris,['Portbou']
-10,stop_area:OCE:SA:71116000,['CR-CI-CH'],['0087-677914-WE'],43.339432,-1.801337,Irun (Irun),[],Irun,Europe/Paris,['Irun']
-11,stop_area:OCE:SA:80251819,['CR-CI-CH'],['0080-251819-BV'],49.756761,6.652361,Trier-Hbf,[],Trier-Hbf,Europe/Paris,No regions
-12,stop_area:OCE:SA:80251850,['CR-CI-CH'],['0080-251850-BV'],0.0,0.0,Konz-Mitte,[],Konz-Mitte,Europe/Paris,No regions
-13,stop_area:OCE:SA:80251967,['CR-CI-CH'],['0080-251967-BV'],0.0,0.0,Perl,[],Perl,Europe/Paris,No regions
-14,stop_area:OCE:SA:87113209,['CR-CI-CH'],['0087-113209-BV'],48.897776,2.400426,Pantin (Pantin),[],Pantin,Europe/Paris,['Pantin']
-15,stop_area:OCE:SA:80290346,['CR-CI-CH'],['0080-290346-BV'],48.783622,9.180496,Stuttgart,[],Stuttgart,Europe/Paris,['Stuttgart-Mitte']
-16,stop_area:OCE:SA:80194035,['CR-CI-CH'],['0080-194035-BV'],49.350034,8.140647,Neustadt (Weinstr) Hbf,[],Neustadt (Weinstr) Hbf,Europe/Paris,['Neustadt-Stadtmitte']
-17,stop_area:OCE:SA:80194258,['CR-CI-CH'],['0080-194258-BV'],49.1976,8.12557,Landau Hbf,[],Landau Hbf,Europe/Paris,No regions
-18,stop_area:OCE:SA:83002451,['CR-CI-CH'],['0083-002451-00'],45.329112,8.414824,Vercelli (Vercelli),[],Vercelli,Europe/Paris,['Vercelli']
-19,stop_area:OCE:SA:80194324,['CR-CI-CH'],['0080-194324-BV'],49.095415,8.122376,WINDEN PFALZ (Winden),[],WINDEN PFALZ,Europe/Paris,['Winden']
-20,stop_area:OCE:SA:80196980,['CR-CI-CH'],['0080-196980-BV'],49.43628,7.768563,Kaiserslautern-Hbf,[],Kaiserslautern-Hbf,Europe/Paris,No regions
-21,stop_area:OCE:SA:80203471,['CR-CI-CH'],['0080-203471-00'],48.140325,11.560415,Munchen-Hbf,[],Munchen-Hbf,Europe/Paris,['Stadtbezirk 02 Ludwigsvorstadt-Isarvorstadt']
-22,stop_area:OCE:SA:80142927,['CR-CI-CH'],['0087-212910-WD'],48.576486,7.808005,Kehl (Kehl),[],Kehl,Europe/Paris,['Kehl']
-23,stop_area:OCE:SA:80143099,['CR-CI-CH'],['0080-143099-BV'],48.476447,7.946696,Offenburg (Offenburg),[],Offenburg,Europe/Paris,['Offenburg']
-24,stop_area:OCE:SA:80143503,['CR-CI-CH'],['0080-143503-BV'],47.997776,7.841564,Freiburg-Breisgau,[],Freiburg-Breisgau,Europe/Paris,No regions
+0,stop_area:OCE:SA:87110288,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-110288-00', '87110288', 'OCE87110288']",47.34836,0.660652, (Joué-lès-Tours),[],,Europe/Paris,['Joué-lès-Tours']
+1,stop_area:OCE:SA:87279166,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-279166-00', '87279166', 'OCE87279166']",46.834999,1.565542, (Niherne),[],,Europe/Paris,['Niherne']
+2,stop_area:OCE:SA:87286740,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-286740-00', '87286740', 'OCE87286740']",50.611568,3.189764, (Tressin),[],,Europe/Paris,['Tressin']
+3,stop_area:OCE:SA:87286781,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-286781-00', '87286781', 'OCE87286781']",50.560597,3.211275, (Cysoing),[],,Europe/Paris,['Cysoing']
+4,stop_area:OCE:SA:87286807,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-286807-00', '87286807', 'OCE87286807']",50.528445,3.220961, (Genech),[],,Europe/Paris,['Genech']
+5,stop_area:OCE:SA:87287219,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-287219-00', '87287219', 'OCE87287219']",50.603891,3.193467, (Anstaing),[],,Europe/Paris,['Anstaing']
+6,stop_area:OCE:SA:87287235,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-287235-00', '87287235', 'OCE87287235']",50.573148,3.20231, (Cysoing),[],,Europe/Paris,['Cysoing']
+7,stop_area:OCE:SA:87287243,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-287243-00', '87287243', 'OCE87287243']",50.538127,3.219541, (Genech),[],,Europe/Paris,['Genech']
+8,stop_area:OCE:SA:87644112,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-644112-HR', '87644112', 'OCE87644112']",47.219605,0.8811870000000001, (Courçay),[],,Europe/Paris,['Courçay']
+9,stop_area:OCE:SA:87689737,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-689737-HR', '87689737', 'OCE87689737']",47.394142,0.671523, (Tours),[],,Europe/Paris,['Tours']
+10,stop_area:OCE:SA:87699298,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-699298-HR', '87699298', 'OCE87699298']",0,0,,[],,Europe/Paris,No regions
+11,stop_area:OCE:SA:80153452,"['CR-CI-CH', 'UIC8', 'external_code']","['0080-153452-BV', '80153452', 'OCE80153452']",50.767759,6.091215,Aachen/Aix la Chapelle (Aachen),[],Aachen/Aix la Chapelle,Europe/Paris,['Aachen']
+12,stop_area:OCE:SA:87313759,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-313759-00', '87313759', 'OCE87313759']",49.685665,1.77418,Abancourt (Abancourt),[],Abancourt,Europe/Paris,['Abancourt']
+13,stop_area:OCE:SA:87481614,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-481614-00', '87481614', 'OCE87481614']",47.55523,-1.524196,Abbaretz (Abbaretz),[],Abbaretz,Europe/Paris,['Abbaretz']
+14,stop_area:OCE:SA:87317362,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-317362-00', '87317362', 'OCE87317362']",50.102194,1.824486,Abbeville (Abbeville),[],Abbeville,Europe/Paris,['Abbeville']
+15,stop_area:OCE:SA:87545269,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-545269-00', '87545269', 'OCE87545269']",48.725377,2.419245,Ablon (Ablon-sur-Seine),[],Ablon,Europe/Paris,['Ablon-sur-Seine']
+16,stop_area:OCE:SA:87191403,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-191403-00', '87191403', 'OCE87191403']",49.261034,6.346529,Aboncourt (Aboncourt),[],Aboncourt,Europe/Paris,['Aboncourt']
+17,stop_area:OCE:SA:87721944,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-721944-HR', '87721944', 'OCE87721944']",46.098866,3.444789,Abrest Mairie (Abrest),[],Abrest Mairie,Europe/Paris,['Abrest']
+18,stop_area:OCE:SA:87677252,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-677252-HR', '87677252', 'OCE87677252']",47.659446,3.713922,Accolay-Le-Pont (Deux Rivières),[],Accolay-Le-Pont,Europe/Paris,['Deux Rivières']
+19,stop_area:OCE:SA:87386052,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-386052-00', '87386052', 'OCE87386052']",48.955163,2.09194,Achères-Grand-Cormier (Saint-Germain-en-Laye),[],Achères-Grand-Cormier,Europe/Paris,['Saint-Germain-en-Laye']
+20,stop_area:OCE:SA:87381657,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-381657-BV', '87381657', 'OCE87381657']",48.969341,2.077786,Achères-Ville (Achères),[],Achères-Ville,Europe/Paris,['Achères']
+21,stop_area:OCE:SA:87342048,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-342048-00', '87342048', 'OCE87342048']",50.131685,2.78014,Achiet (Achiet-le-Grand),[],Achiet,Europe/Paris,['Achiet-le-Grand']
+22,stop_area:OCE:SA:87658856,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-658856-HR', '87658856', 'OCE87658856']",48.905629,7.208236,Adamswiller Lot. forêt. (Adamswiller),[],Adamswiller Lot. forêt.,Europe/Paris,['Adamswiller']
+23,stop_area:OCE:SA:87658922,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-658922-HR', '87658922', 'OCE87658922']",48.903847,7.201171,Adamswiller-(Mairie). (Adamswiller),[],Adamswiller-(Mairie).,Europe/Paris,['Adamswiller']
+24,stop_area:OCE:SA:87001479,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-001479-BV', '87001479', 'OCE87001479']",49.003605,2.571026,Aérop-C-de-Gaulle-2-TGV (Tremblay-en-France),[],Aérop-C-de-Gaulle-2-TGV,Europe/Paris,['Tremblay-en-France']

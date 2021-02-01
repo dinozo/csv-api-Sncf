@@ -1,0 +1,3 @@
+,Section,id,departure,arrival,duration,from,to,type,transfers
+0,1,public_transport,15h46,18h09,2:23:00,Paris-Gare-de-Lyon (Paris),Lyon-Perrache (Lyon),best,0
+1,1,public_transport,13h52,16h09,2:17:00,Paris-Gare-de-Lyon (Paris),Lyon-Perrache (Lyon),best,0

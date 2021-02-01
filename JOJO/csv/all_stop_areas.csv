@@ -409,7 +409,7 @@
 407,stop_area:OCE:SA:87415620,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-415620-BV', '87415620', 'OCE87415620']",49.174632,1.352518,Gaillon-Aubevoye (Le Val d'Hazey),[],Gaillon-Aubevoye,Europe/Paris,"[""Le Val d'Hazey""]"
 408,stop_area:OCE:SA:87618702,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-618702-00', '87618702', 'OCE87618702']",42.989795,0.6253649999999999,GaliÃ© (Bagiry),[],GaliÃ©,Europe/Paris,['Bagiry']
 409,stop_area:OCE:SA:87775130,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-775130-00', '87775130', 'OCE87775130']",43.71601,4.17104,Gallargues (Gallargues-le-Montueux),[],Gallargues,Europe/Paris,['Gallargues-le-Montueux']
-410,stop_area:OCE:SA:87497461,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-497461-00', '87497461', 'OCE87497461']",43.573338,1.419297,Gallieni-CancÃ©ropÃ´le (Toulouse),[],Gallieni-CancÃ©ropÃ´le,Europe/Paris,['Toulouse']
+410,stop_area:OCE:SA:87497461,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-497461-00', '87497461', 'OCE87497461']",43.573338,1.419297,Toulouse,[],Toulouse,Europe/Paris,['Toulouse']
 411,stop_area:OCE:SA:87694638,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-694638-00', '87694638', 'OCE87694638']",46.642025,4.32992,Galuzot (Saint-Vallier),[],Galuzot,Europe/Paris,['Saint-Vallier']
 412,stop_area:OCE:SA:87212332,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-212332-00', '87212332', 'OCE87212332']",48.694941,7.87892,Gambsheim (Gambsheim),[],Gambsheim,Europe/Paris,['Gambsheim']
 413,stop_area:OCE:SA:87659748,"['CR-CI-CH', 'UIC8', 'external_code']","['0087-659748-HR', '87659748', 'OCE87659748']",48.692156,7.883346,Gambsheim-(Poste). (Gambsheim),[],Gambsheim-(Poste).,Europe/Paris,['Gambsheim']

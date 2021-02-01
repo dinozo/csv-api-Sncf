@@ -12,7 +12,7 @@ class testSNCF(unittest.TestCase):
     def test_read_json(self):
         random.shuffle(name_list)
         name = "".join(name_list)
-        self.assertTrue(sncf.read_json(url=URL, name=name), os.path.isfile(f"json/{name}.JSON"))
+        self.assertTrue(sncf.read_json_api(url=URL, name=name), os.path.isfile(f"json/{name}.JSON"))
         os.remove(f"json/{name}.JSON")
 
 

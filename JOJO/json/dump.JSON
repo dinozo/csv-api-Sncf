@@ -1,1042 +1,704 @@
 {
     "context": {
-        "current_datetime": "20210127T140000",
+        "car_direct_path": {
+            "co2_emission": {
+                "unit": "gEC",
+                "value": 97091.1386812212
+            }
+        },
+        "current_datetime": "20210201T154740",
         "timezone": "Europe/Paris"
     },
     "disruptions": [],
+    "exceptions": [],
     "feed_publishers": [],
+    "journeys": [
+        {
+            "arrival_date_time": "20210201T160900",
+            "calendars": [
+                {
+                    "active_periods": [
+                        {
+                            "begin": "20210121",
+                            "end": "20210328"
+                        }
+                    ],
+                    "exceptions": [
+                        {
+                            "datetime": "20210216",
+                            "type": "remove"
+                        },
+                        {
+                            "datetime": "20210217",
+                            "type": "remove"
+                        }
+                    ],
+                    "week_pattern": {
+                        "friday": true,
+                        "monday": true,
+                        "saturday": true,
+                        "sunday": true,
+                        "thursday": true,
+                        "tuesday": true,
+                        "wednesday": true
+                    }
+                }
+            ],
+            "co2_emission": {
+                "unit": "gEC",
+                "value": 1355.2332
+            },
+            "departure_date_time": "20210201T135200",
+            "distances": {
+                "bike": 0,
+                "car": 0,
+                "ridesharing": 0,
+                "taxi": 0,
+                "walking": 0
+            },
+            "duration": 8220,
+            "durations": {
+                "bike": 0,
+                "car": 0,
+                "ridesharing": 0,
+                "taxi": 0,
+                "total": 8220,
+                "walking": 0
+            },
+            "fare": {
+                "found": false,
+                "links": [],
+                "total": {
+                    "value": "0.0"
+                }
+            },
+            "links": [
+                {
+                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&is_journey_schedules=True&datetime=20210201T160900&last_section_mode%5B%5D=walking&min_nb_journeys=5&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87722025&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87686006&from=stop_area%3AOCE%3ASA%3A87686006",
+                    "rel": "same_journey_schedules",
+                    "templated": false,
+                    "type": "journeys"
+                },
+                {
+                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?count=1&first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&is_journey_schedules=True&datetime=20210201T160900&last_section_mode%5B%5D=walking&min_nb_journeys=1&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87722025&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87686006&from=stop_area%3AOCE%3ASA%3A87686006",
+                    "rel": "this_journey",
+                    "templated": false,
+                    "type": "journeys"
+                }
+            ],
+            "nb_transfers": 0,
+            "requested_date_time": "20210201T174259",
+            "sections": [
+                {
+                    "arrival_date_time": "20210201T135200",
+                    "co2_emission": {
+                        "unit": "",
+                        "value": 0.0
+                    },
+                    "departure_date_time": "20210201T135200",
+                    "duration": 0,
+                    "from": {
+                        "embedded_type": "stop_area",
+                        "id": "stop_area:OCE:SA:87686006",
+                        "name": "Paris-Gare-de-Lyon (Paris)",
+                        "quality": 0,
+                        "stop_area": {
+                            "administrative_regions": [
+                                {
+                                    "coord": {
+                                        "lat": "48.8566969",
+                                        "lon": "2.3514616"
+                                    },
+                                    "id": "admin:fr:75056",
+                                    "insee": "75056",
+                                    "label": "Paris (75000-75116)",
+                                    "level": 8,
+                                    "name": "Paris",
+                                    "zip_code": "75000;75116"
+                                }
+                            ],
+                            "codes": [
+                                {
+                                    "type": "CR-CI-CH",
+                                    "value": "0087-686006-BV"
+                                },
+                                {
+                                    "type": "UIC8",
+                                    "value": "87686006"
+                                },
+                                {
+                                    "type": "external_code",
+                                    "value": "OCE87686006"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "48.844922",
+                                "lon": "2.373462"
+                            },
+                            "id": "stop_area:OCE:SA:87686006",
+                            "label": "Paris-Gare-de-Lyon (Paris)",
+                            "links": [],
+                            "name": "Paris-Gare-de-Lyon",
+                            "timezone": "Europe/Paris"
+                        }
+                    },
+                    "id": "83SMZRfek3NTuRA2FEaaL5_0",
+                    "links": [],
+                    "mode": "walking",
+                    "to": {
+                        "embedded_type": "stop_point",
+                        "id": "stop_point:OCE:SP:TGVINOUI-87686006",
+                        "name": "Paris-Gare-de-Lyon (Paris)",
+                        "quality": 0,
+                        "stop_point": {
+                            "administrative_regions": [
+                                {
+                                    "coord": {
+                                        "lat": "48.8566969",
+                                        "lon": "2.3514616"
+                                    },
+                                    "id": "admin:fr:75056",
+                                    "insee": "75056",
+                                    "label": "Paris (75000-75116)",
+                                    "level": 8,
+                                    "name": "Paris",
+                                    "zip_code": "75000;75116"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "48.844922",
+                                "lon": "2.373462"
+                            },
+                            "equipments": [],
+                            "fare_zone": {
+                                "name": "0"
+                            },
+                            "id": "stop_point:OCE:SP:TGVINOUI-87686006",
+                            "label": "Paris-Gare-de-Lyon (Paris)",
+                            "links": [],
+                            "name": "Paris-Gare-de-Lyon",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "CR-CI-CH",
+                                        "value": "0087-686006-BV"
+                                    },
+                                    {
+                                        "type": "UIC8",
+                                        "value": "87686006"
+                                    },
+                                    {
+                                        "type": "external_code",
+                                        "value": "OCE87686006"
+                                    }
+                                ],
+                                "coord": {
+                                    "lat": "48.844922",
+                                    "lon": "2.373462"
+                                },
+                                "id": "stop_area:OCE:SA:87686006",
+                                "label": "Paris-Gare-de-Lyon (Paris)",
+                                "links": [],
+                                "name": "Paris-Gare-de-Lyon",
+                                "timezone": "Europe/Paris"
+                            }
+                        }
+                    },
+                    "type": "crow_fly"
+                },
+                {
+                    "additional_informations": [
+                        "regular"
+                    ],
+                    "arrival_date_time": "20210201T160900",
+                    "base_arrival_date_time": "20210201T160900",
+                    "base_departure_date_time": "20210201T135200",
+                    "co2_emission": {
+                        "unit": "gEC",
+                        "value": 1355.2332
+                    },
+                    "data_freshness": "base_schedule",
+                    "departure_date_time": "20210201T135200",
+                    "display_informations": {
+                        "code": "",
+                        "color": "000000",
+                        "commercial_mode": "TGV INOUI",
+                        "description": "",
+                        "direction": "Lyon-Perrache (Lyon)",
+                        "equipments": [],
+                        "headsign": "6617",
+                        "label": "Paris <> Lyon <> Saint Etienne",
+                        "links": [],
+                        "name": "Paris <> Lyon <> Saint Etienne",
+                        "network": "SNCF",
+                        "physical_mode": "Train grande vitesse",
+                        "text_color": "FFFFFF",
+                        "trip_short_name": "6617"
+                    },
+                    "duration": 8220,
+                    "from": {
+                        "embedded_type": "stop_point",
+                        "id": "stop_point:OCE:SP:TGVINOUI-87686006",
+                        "name": "Paris-Gare-de-Lyon (Paris)",
+                        "quality": 0,
+                        "stop_point": {
+                            "administrative_regions": [
+                                {
+                                    "coord": {
+                                        "lat": "48.8566969",
+                                        "lon": "2.3514616"
+                                    },
+                                    "id": "admin:fr:75056",
+                                    "insee": "75056",
+                                    "label": "Paris (75000-75116)",
+                                    "level": 8,
+                                    "name": "Paris",
+                                    "zip_code": "75000;75116"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "48.844922",
+                                "lon": "2.373462"
+                            },
+                            "equipments": [],
+                            "fare_zone": {
+                                "name": "0"
+                            },
+                            "id": "stop_point:OCE:SP:TGVINOUI-87686006",
+                            "label": "Paris-Gare-de-Lyon (Paris)",
+                            "links": [],
+                            "name": "Paris-Gare-de-Lyon",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "CR-CI-CH",
+                                        "value": "0087-686006-BV"
+                                    },
+                                    {
+                                        "type": "UIC8",
+                                        "value": "87686006"
+                                    },
+                                    {
+                                        "type": "external_code",
+                                        "value": "OCE87686006"
+                                    }
+                                ],
+                                "coord": {
+                                    "lat": "48.844922",
+                                    "lon": "2.373462"
+                                },
+                                "id": "stop_area:OCE:SA:87686006",
+                                "label": "Paris-Gare-de-Lyon (Paris)",
+                                "links": [],
+                                "name": "Paris-Gare-de-Lyon",
+                                "timezone": "Europe/Paris"
+                            }
+                        }
+                    },
+                    "geojson": {
+                        "coordinates": [
+                            [
+                                2.373462,
+                                48.844922
+                            ],
+                            [
+                                4.499388,
+                                46.765309
+                            ],
+                            [
+                                4.859435,
+                                45.760585
+                            ],
+                            [
+                                4.825941,
+                                45.748785
+                            ]
+                        ],
+                        "properties": [
+                            {
+                                "length": 398598
+                            }
+                        ],
+                        "type": "LineString"
+                    },
+                    "id": "section_0_0",
+                    "links": [
+                        {
+                            "id": "vehicle_journey:OCE:SN006617F16016_dst_1",
+                            "type": "vehicle_journey"
+                        },
+                        {
+                            "id": "line:OCE:138",
+                            "type": "line"
+                        },
+                        {
+                            "id": "route:OCE:138-TGVINOUI-87686006-87722025",
+                            "type": "route"
+                        },
+                        {
+                            "id": "commercial_mode:INOUI",
+                            "type": "commercial_mode"
+                        },
+                        {
+                            "id": "physical_mode:LongDistanceTrain",
+                            "type": "physical_mode"
+                        },
+                        {
+                            "id": "network:sncf",
+                            "type": "network"
+                        }
+                    ],
+                    "stop_date_times": [
+                        {
+                            "additional_informations": [],
+                            "arrival_date_time": "20210201T135200",
+                            "base_arrival_date_time": "20210201T135200",
+                            "base_departure_date_time": "20210201T135200",
+                            "departure_date_time": "20210201T135200",
+                            "links": [],
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "48.844922",
+                                    "lon": "2.373462"
+                                },
+                                "equipments": [],
+                                "fare_zone": {
+                                    "name": "0"
+                                },
+                                "id": "stop_point:OCE:SP:TGVINOUI-87686006",
+                                "label": "Paris-Gare-de-Lyon (Paris)",
+                                "links": [],
+                                "name": "Paris-Gare-de-Lyon"
+                            }
+                        },
+                        {
+                            "additional_informations": [],
+                            "arrival_date_time": "20210201T151300",
+                            "base_arrival_date_time": "20210201T151300",
+                            "base_departure_date_time": "20210201T151600",
+                            "departure_date_time": "20210201T151600",
+                            "links": [],
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "46.765309",
+                                    "lon": "4.499388"
+                                },
+                                "equipments": [],
+                                "fare_zone": {
+                                    "name": "0"
+                                },
+                                "id": "stop_point:OCE:SP:TGVINOUI-87694109",
+                                "label": "Creusot - TGV (le) (Écuisses)",
+                                "links": [],
+                                "name": "Creusot - TGV (le)"
+                            }
+                        },
+                        {
+                            "additional_informations": [],
+                            "arrival_date_time": "20210201T155600",
+                            "base_arrival_date_time": "20210201T155600",
+                            "base_departure_date_time": "20210201T160100",
+                            "departure_date_time": "20210201T160100",
+                            "links": [],
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.760585",
+                                    "lon": "4.859435"
+                                },
+                                "equipments": [],
+                                "fare_zone": {
+                                    "name": "0"
+                                },
+                                "id": "stop_point:OCE:SP:TGVINOUI-87723197",
+                                "label": "Lyon-Part-Dieu (Lyon)",
+                                "links": [],
+                                "name": "Lyon-Part-Dieu"
+                            }
+                        },
+                        {
+                            "additional_informations": [],
+                            "arrival_date_time": "20210201T160900",
+                            "base_arrival_date_time": "20210201T160900",
+                            "base_departure_date_time": "20210201T160900",
+                            "departure_date_time": "20210201T160900",
+                            "links": [],
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "45.748785",
+                                    "lon": "4.825941"
+                                },
+                                "equipments": [],
+                                "fare_zone": {
+                                    "name": "0"
+                                },
+                                "id": "stop_point:OCE:SP:TGVINOUI-87722025",
+                                "label": "Lyon-Perrache (Lyon)",
+                                "links": [],
+                                "name": "Lyon-Perrache"
+                            }
+                        }
+                    ],
+                    "to": {
+                        "embedded_type": "stop_point",
+                        "id": "stop_point:OCE:SP:TGVINOUI-87722025",
+                        "name": "Lyon-Perrache (Lyon)",
+                        "quality": 0,
+                        "stop_point": {
+                            "administrative_regions": [
+                                {
+                                    "coord": {
+                                        "lat": "45.7578137",
+                                        "lon": "4.8320114"
+                                    },
+                                    "id": "admin:fr:69123",
+                                    "insee": "69123",
+                                    "label": "Lyon",
+                                    "level": 8,
+                                    "name": "Lyon",
+                                    "zip_code": ""
+                                }
+                            ],
+                            "coord": {
+                                "lat": "45.748785",
+                                "lon": "4.825941"
+                            },
+                            "equipments": [],
+                            "fare_zone": {
+                                "name": "0"
+                            },
+                            "id": "stop_point:OCE:SP:TGVINOUI-87722025",
+                            "label": "Lyon-Perrache (Lyon)",
+                            "links": [],
+                            "name": "Lyon-Perrache",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "CR-CI-CH",
+                                        "value": "0087-722025-BV"
+                                    },
+                                    {
+                                        "type": "UIC8",
+                                        "value": "87722025"
+                                    },
+                                    {
+                                        "type": "external_code",
+                                        "value": "OCE87722025"
+                                    }
+                                ],
+                                "coord": {
+                                    "lat": "45.748785",
+                                    "lon": "4.825941"
+                                },
+                                "id": "stop_area:OCE:SA:87722025",
+                                "label": "Lyon-Perrache (Lyon)",
+                                "links": [],
+                                "name": "Lyon-Perrache",
+                                "timezone": "Europe/Paris"
+                            }
+                        }
+                    },
+                    "type": "public_transport"
+                },
+                {
+                    "arrival_date_time": "20210201T160900",
+                    "co2_emission": {
+                        "unit": "",
+                        "value": 0.0
+                    },
+                    "departure_date_time": "20210201T160900",
+                    "duration": 0,
+                    "from": {
+                        "embedded_type": "stop_point",
+                        "id": "stop_point:OCE:SP:TGVINOUI-87722025",
+                        "name": "Lyon-Perrache (Lyon)",
+                        "quality": 0,
+                        "stop_point": {
+                            "administrative_regions": [
+                                {
+                                    "coord": {
+                                        "lat": "45.7578137",
+                                        "lon": "4.8320114"
+                                    },
+                                    "id": "admin:fr:69123",
+                                    "insee": "69123",
+                                    "label": "Lyon",
+                                    "level": 8,
+                                    "name": "Lyon",
+                                    "zip_code": ""
+                                }
+                            ],
+                            "coord": {
+                                "lat": "45.748785",
+                                "lon": "4.825941"
+                            },
+                            "equipments": [],
+                            "fare_zone": {
+                                "name": "0"
+                            },
+                            "id": "stop_point:OCE:SP:TGVINOUI-87722025",
+                            "label": "Lyon-Perrache (Lyon)",
+                            "links": [],
+                            "name": "Lyon-Perrache",
+                            "stop_area": {
+                                "codes": [
+                                    {
+                                        "type": "CR-CI-CH",
+                                        "value": "0087-722025-BV"
+                                    },
+                                    {
+                                        "type": "UIC8",
+                                        "value": "87722025"
+                                    },
+                                    {
+                                        "type": "external_code",
+                                        "value": "OCE87722025"
+                                    }
+                                ],
+                                "coord": {
+                                    "lat": "45.748785",
+                                    "lon": "4.825941"
+                                },
+                                "id": "stop_area:OCE:SA:87722025",
+                                "label": "Lyon-Perrache (Lyon)",
+                                "links": [],
+                                "name": "Lyon-Perrache",
+                                "timezone": "Europe/Paris"
+                            }
+                        }
+                    },
+                    "id": "cJhyFbKJVW5agmCC6VNUEn_0",
+                    "links": [],
+                    "mode": "walking",
+                    "to": {
+                        "embedded_type": "stop_area",
+                        "id": "stop_area:OCE:SA:87722025",
+                        "name": "Lyon-Perrache (Lyon)",
+                        "quality": 0,
+                        "stop_area": {
+                            "administrative_regions": [
+                                {
+                                    "coord": {
+                                        "lat": "45.7578137",
+                                        "lon": "4.8320114"
+                                    },
+                                    "id": "admin:fr:69123",
+                                    "insee": "69123",
+                                    "label": "Lyon",
+                                    "level": 8,
+                                    "name": "Lyon",
+                                    "zip_code": ""
+                                }
+                            ],
+                            "codes": [
+                                {
+                                    "type": "CR-CI-CH",
+                                    "value": "0087-722025-BV"
+                                },
+                                {
+                                    "type": "UIC8",
+                                    "value": "87722025"
+                                },
+                                {
+                                    "type": "external_code",
+                                    "value": "OCE87722025"
+                                }
+                            ],
+                            "coord": {
+                                "lat": "45.748785",
+                                "lon": "4.825941"
+                            },
+                            "id": "stop_area:OCE:SA:87722025",
+                            "label": "Lyon-Perrache (Lyon)",
+                            "links": [],
+                            "name": "Lyon-Perrache",
+                            "timezone": "Europe/Paris"
+                        }
+                    },
+                    "type": "crow_fly"
+                }
+            ],
+            "status": "",
+            "tags": [
+                "walking",
+                "ecologic"
+            ],
+            "type": "best"
+        }
+    ],
     "links": [
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/stop_areas/{stop_areas.id}",
-            "rel": "stop_areas",
-            "templated": true,
-            "type": "stop_areas"
-        },
-        {
-            "href": "https://api.sncf.com/v1/coverage/sncf/stop_areas/{stop_areas.id}/route_schedules",
-            "rel": "route_schedules",
-            "templated": true,
-            "type": "route_schedules"
-        },
-        {
-            "href": "https://api.sncf.com/v1/coverage/sncf/stop_areas/{stop_areas.id}/stop_schedules",
-            "rel": "stop_schedules",
-            "templated": true,
-            "type": "stop_schedules"
-        },
-        {
-            "href": "https://api.sncf.com/v1/coverage/sncf/stop_areas/{stop_areas.id}/arrivals",
-            "rel": "arrivals",
-            "templated": true,
-            "type": "arrivals"
-        },
-        {
-            "href": "https://api.sncf.com/v1/coverage/sncf/stop_areas/{stop_areas.id}/departures",
-            "rel": "departures",
-            "templated": true,
-            "type": "departures"
-        },
-        {
-            "href": "https://api.sncf.com/v1/coverage/sncf/stop_areas/{stop_areas.id}/places_nearby",
-            "rel": "places_nearby",
-            "templated": true,
-            "type": "places_nearby"
-        },
-        {
-            "href": "https://api.sncf.com/v1/coverage/sncf/stop_areas/{stop_areas.id}/journeys",
-            "rel": "journeys",
-            "templated": true,
-            "type": "journey"
-        },
-        {
-            "href": "https://api.sncf.com/v1/coverage/sncf/stop_areas/{stop_areas.id}/traffic_reports",
-            "rel": "disruptions",
-            "templated": true,
-            "type": "disruption"
-        },
-        {
-            "href": "https://api.sncf.com/v1/coverage/sncf/stop_areas?start_page=1",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210201T135201",
+            "rel": "next",
             "templated": false,
             "type": "next"
         },
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/stop_areas?start_page=172",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210201T160859",
+            "rel": "prev",
+            "templated": false,
+            "type": "prev"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210201T000000",
+            "rel": "first",
+            "templated": false,
+            "type": "first"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210201T235959",
+            "rel": "last",
             "templated": false,
             "type": "last"
         },
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/stop_areas",
-            "templated": false,
-            "type": "first"
+            "href": "https://api.sncf.com/v1/coverage/sncf/stop_points/{stop_point.id}",
+            "rel": "stop_points",
+            "templated": true,
+            "type": "stop_point"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/stop_areas/{stop_area.id}",
+            "rel": "stop_areas",
+            "templated": true,
+            "type": "stop_area"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/vehicle_journeys/{vehicle_journey.id}",
+            "rel": "vehicle_journeys",
+            "templated": true,
+            "type": "vehicle_journey"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/routes/{route.id}",
+            "rel": "routes",
+            "templated": true,
+            "type": "route"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/commercial_modes/{commercial_mode.id}",
+            "rel": "commercial_modes",
+            "templated": true,
+            "type": "commercial_mode"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/lines/{line.id}",
+            "rel": "lines",
+            "templated": true,
+            "type": "line"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/physical_modes/{physical_mode.id}",
+            "rel": "physical_modes",
+            "templated": true,
+            "type": "physical_mode"
+        },
+        {
+            "href": "https://api.sncf.com/v1/coverage/sncf/networks/{network.id}",
+            "rel": "networks",
+            "templated": true,
+            "type": "network"
         }
     ],
-    "pagination": {
-        "items_on_page": 25,
-        "items_per_page": 25,
-        "start_page": 0,
-        "total_result": 4307
-    },
-    "stop_areas": [
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "47.3510905",
-                        "lon": "0.6622524"
-                    },
-                    "id": "admin:fr:37122",
-                    "insee": "37122",
-                    "label": "Joué-lès-Tours (37300)",
-                    "level": 8,
-                    "name": "Joué-lès-Tours",
-                    "zip_code": "37300"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-110288-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87110288"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87110288"
-                }
-            ],
-            "coord": {
-                "lat": "47.34836",
-                "lon": "0.660652"
-            },
-            "id": "stop_area:OCE:SA:87110288",
-            "label": " (Joué-lès-Tours)",
-            "links": [],
-            "name": "",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "46.8288841",
-                        "lon": "1.5640575"
-                    },
-                    "id": "admin:fr:36142",
-                    "insee": "36142",
-                    "label": "Niherne (36250)",
-                    "level": 8,
-                    "name": "Niherne",
-                    "zip_code": "36250"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-279166-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87279166"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87279166"
-                }
-            ],
-            "coord": {
-                "lat": "46.834999",
-                "lon": "1.565542"
-            },
-            "id": "stop_area:OCE:SA:87279166",
-            "label": " (Niherne)",
-            "links": [],
-            "name": "",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "50.6167936",
-                        "lon": "3.1927064"
-                    },
-                    "id": "admin:fr:59602",
-                    "insee": "59602",
-                    "label": "Tressin (59152)",
-                    "level": 8,
-                    "name": "Tressin",
-                    "zip_code": "59152"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-286740-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87286740"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87286740"
-                }
-            ],
-            "coord": {
-                "lat": "50.611568",
-                "lon": "3.189764"
-            },
-            "id": "stop_area:OCE:SA:87286740",
-            "label": " (Tressin)",
-            "links": [],
-            "name": "",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "50.5647",
-                        "lon": "3.20942"
-                    },
-                    "id": "admin:fr:59168",
-                    "insee": "59168",
-                    "label": "Cysoing (59830)",
-                    "level": 8,
-                    "name": "Cysoing",
-                    "zip_code": "59830"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-286781-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87286781"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87286781"
-                }
-            ],
-            "coord": {
-                "lat": "50.560597",
-                "lon": "3.211275"
-            },
-            "id": "stop_area:OCE:SA:87286781",
-            "label": " (Cysoing)",
-            "links": [],
-            "name": "",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "50.5305709",
-                        "lon": "3.2141332"
-                    },
-                    "id": "admin:fr:59258",
-                    "insee": "59258",
-                    "label": "Genech (59242)",
-                    "level": 8,
-                    "name": "Genech",
-                    "zip_code": "59242"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-286807-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87286807"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87286807"
-                }
-            ],
-            "coord": {
-                "lat": "50.528445",
-                "lon": "3.220961"
-            },
-            "id": "stop_area:OCE:SA:87286807",
-            "label": " (Genech)",
-            "links": [],
-            "name": "",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "50.6043089",
-                        "lon": "3.1889645"
-                    },
-                    "id": "admin:fr:59013",
-                    "insee": "59013",
-                    "label": "Anstaing (59152)",
-                    "level": 8,
-                    "name": "Anstaing",
-                    "zip_code": "59152"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-287219-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87287219"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87287219"
-                }
-            ],
-            "coord": {
-                "lat": "50.603891",
-                "lon": "3.193467"
-            },
-            "id": "stop_area:OCE:SA:87287219",
-            "label": " (Anstaing)",
-            "links": [],
-            "name": "",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "50.5647",
-                        "lon": "3.20942"
-                    },
-                    "id": "admin:fr:59168",
-                    "insee": "59168",
-                    "label": "Cysoing (59830)",
-                    "level": 8,
-                    "name": "Cysoing",
-                    "zip_code": "59830"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-287235-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87287235"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87287235"
-                }
-            ],
-            "coord": {
-                "lat": "50.573148",
-                "lon": "3.20231"
-            },
-            "id": "stop_area:OCE:SA:87287235",
-            "label": " (Cysoing)",
-            "links": [],
-            "name": "",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "50.5305709",
-                        "lon": "3.2141332"
-                    },
-                    "id": "admin:fr:59258",
-                    "insee": "59258",
-                    "label": "Genech (59242)",
-                    "level": 8,
-                    "name": "Genech",
-                    "zip_code": "59242"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-287243-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87287243"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87287243"
-                }
-            ],
-            "coord": {
-                "lat": "50.538127",
-                "lon": "3.219541"
-            },
-            "id": "stop_area:OCE:SA:87287243",
-            "label": " (Genech)",
-            "links": [],
-            "name": "",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "47.2508873",
-                        "lon": "0.8760917"
-                    },
-                    "id": "admin:fr:37085",
-                    "insee": "37085",
-                    "label": "Courçay (37310)",
-                    "level": 8,
-                    "name": "Courçay",
-                    "zip_code": "37310"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-644112-HR"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87644112"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87644112"
-                }
-            ],
-            "coord": {
-                "lat": "47.219605",
-                "lon": "0.8811870000000001"
-            },
-            "id": "stop_area:OCE:SA:87644112",
-            "label": " (Courçay)",
-            "links": [],
-            "name": "",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "47.3900474",
-                        "lon": "0.6889268"
-                    },
-                    "id": "admin:fr:37261",
-                    "insee": "37261",
-                    "label": "Tours (37000-37200)",
-                    "level": 8,
-                    "name": "Tours",
-                    "zip_code": "37000;37200"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-689737-HR"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87689737"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87689737"
-                }
-            ],
-            "coord": {
-                "lat": "47.394142",
-                "lon": "0.671523"
-            },
-            "id": "stop_area:OCE:SA:87689737",
-            "label": " (Tours)",
-            "links": [],
-            "name": "",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-699298-HR"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87699298"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87699298"
-                }
-            ],
-            "coord": {
-                "lat": "0",
-                "lon": "0"
-            },
-            "id": "stop_area:OCE:SA:87699298",
-            "label": "",
-            "links": [],
-            "name": "",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "50.776351",
-                        "lon": "6.083862"
-                    },
-                    "id": "admin:osm:relation:62564",
-                    "insee": "",
-                    "label": "Aachen",
-                    "level": 8,
-                    "name": "Aachen",
-                    "zip_code": ""
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0080-153452-BV"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "80153452"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE80153452"
-                }
-            ],
-            "coord": {
-                "lat": "50.767759",
-                "lon": "6.091215"
-            },
-            "id": "stop_area:OCE:SA:80153452",
-            "label": "Aachen/Aix la Chapelle (Aachen)",
-            "links": [],
-            "name": "Aachen/Aix la Chapelle",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "49.6977145",
-                        "lon": "1.7646826"
-                    },
-                    "id": "admin:fr:60001",
-                    "insee": "60001",
-                    "label": "Abancourt (60220)",
-                    "level": 8,
-                    "name": "Abancourt",
-                    "zip_code": "60220"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-313759-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87313759"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87313759"
-                }
-            ],
-            "coord": {
-                "lat": "49.685665",
-                "lon": "1.77418"
-            },
-            "id": "stop_area:OCE:SA:87313759",
-            "label": "Abancourt (Abancourt)",
-            "links": [],
-            "name": "Abancourt",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "47.5525545",
-                        "lon": "-1.5322775"
-                    },
-                    "id": "admin:fr:44001",
-                    "insee": "44001",
-                    "label": "Abbaretz (44170)",
-                    "level": 8,
-                    "name": "Abbaretz",
-                    "zip_code": "44170"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-481614-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87481614"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87481614"
-                }
-            ],
-            "coord": {
-                "lat": "47.55523",
-                "lon": "-1.524196"
-            },
-            "id": "stop_area:OCE:SA:87481614",
-            "label": "Abbaretz (Abbaretz)",
-            "links": [],
-            "name": "Abbaretz",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "50.1060835",
-                        "lon": "1.8337029"
-                    },
-                    "id": "admin:fr:80001",
-                    "insee": "80001",
-                    "label": "Abbeville (80100)",
-                    "level": 8,
-                    "name": "Abbeville",
-                    "zip_code": "80100"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-317362-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87317362"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87317362"
-                }
-            ],
-            "coord": {
-                "lat": "50.102194",
-                "lon": "1.824486"
-            },
-            "id": "stop_area:OCE:SA:87317362",
-            "label": "Abbeville (Abbeville)",
-            "links": [],
-            "name": "Abbeville",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "48.7247582",
-                        "lon": "2.421509"
-                    },
-                    "id": "admin:fr:94001",
-                    "insee": "94001",
-                    "label": "Ablon-sur-Seine (94480)",
-                    "level": 8,
-                    "name": "Ablon-sur-Seine",
-                    "zip_code": "94480"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-545269-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87545269"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87545269"
-                }
-            ],
-            "coord": {
-                "lat": "48.725377",
-                "lon": "2.419245"
-            },
-            "id": "stop_area:OCE:SA:87545269",
-            "label": "Ablon (Ablon-sur-Seine)",
-            "links": [],
-            "name": "Ablon",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "49.2602817",
-                        "lon": "6.3463759"
-                    },
-                    "id": "admin:fr:57001",
-                    "insee": "57001",
-                    "label": "Aboncourt (57920)",
-                    "level": 8,
-                    "name": "Aboncourt",
-                    "zip_code": "57920"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-191403-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87191403"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87191403"
-                }
-            ],
-            "coord": {
-                "lat": "49.261034",
-                "lon": "6.346529"
-            },
-            "id": "stop_area:OCE:SA:87191403",
-            "label": "Aboncourt (Aboncourt)",
-            "links": [],
-            "name": "Aboncourt",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "46.0980139",
-                        "lon": "3.4450434"
-                    },
-                    "id": "admin:fr:3001",
-                    "insee": "3001",
-                    "label": "Abrest (03200)",
-                    "level": 8,
-                    "name": "Abrest",
-                    "zip_code": "03200"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-721944-HR"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87721944"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87721944"
-                }
-            ],
-            "coord": {
-                "lat": "46.098866",
-                "lon": "3.444789"
-            },
-            "id": "stop_area:OCE:SA:87721944",
-            "label": "Abrest Mairie (Abrest)",
-            "links": [],
-            "name": "Abrest Mairie",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "47.6839847",
-                        "lon": "3.6898895"
-                    },
-                    "id": "admin:fr:89130",
-                    "insee": "89130",
-                    "label": "Deux Rivières",
-                    "level": 8,
-                    "name": "Deux Rivières",
-                    "zip_code": ""
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-677252-HR"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87677252"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87677252"
-                }
-            ],
-            "coord": {
-                "lat": "47.659446",
-                "lon": "3.713922"
-            },
-            "id": "stop_area:OCE:SA:87677252",
-            "label": "Accolay-Le-Pont (Deux Rivières)",
-            "links": [],
-            "name": "Accolay-Le-Pont",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "48.8990413",
-                        "lon": "2.0942792"
-                    },
-                    "id": "admin:fr:78551",
-                    "insee": "78551",
-                    "label": "Saint-Germain-en-Laye",
-                    "level": 8,
-                    "name": "Saint-Germain-en-Laye",
-                    "zip_code": ""
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-386052-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87386052"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87386052"
-                }
-            ],
-            "coord": {
-                "lat": "48.955163",
-                "lon": "2.09194"
-            },
-            "id": "stop_area:OCE:SA:87386052",
-            "label": "Achères-Grand-Cormier (Saint-Germain-en-Laye)",
-            "links": [],
-            "name": "Achères-Grand-Cormier",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "48.9606321",
-                        "lon": "2.0698106"
-                    },
-                    "id": "admin:fr:78005",
-                    "insee": "78005",
-                    "label": "Achères (78260)",
-                    "level": 8,
-                    "name": "Achères",
-                    "zip_code": "78260"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-381657-BV"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87381657"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87381657"
-                }
-            ],
-            "coord": {
-                "lat": "48.969341",
-                "lon": "2.077786"
-            },
-            "id": "stop_area:OCE:SA:87381657",
-            "label": "Achères-Ville (Achères)",
-            "links": [],
-            "name": "Achères-Ville",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "50.1320114",
-                        "lon": "2.7843609"
-                    },
-                    "id": "admin:fr:62005",
-                    "insee": "62005",
-                    "label": "Achiet-le-Grand (62121)",
-                    "level": 8,
-                    "name": "Achiet-le-Grand",
-                    "zip_code": "62121"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-342048-00"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87342048"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87342048"
-                }
-            ],
-            "coord": {
-                "lat": "50.131685",
-                "lon": "2.78014"
-            },
-            "id": "stop_area:OCE:SA:87342048",
-            "label": "Achiet (Achiet-le-Grand)",
-            "links": [],
-            "name": "Achiet",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "48.9052331",
-                        "lon": "7.2036488"
-                    },
-                    "id": "admin:fr:67002",
-                    "insee": "67002",
-                    "label": "Adamswiller (67320)",
-                    "level": 8,
-                    "name": "Adamswiller",
-                    "zip_code": "67320"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-658856-HR"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87658856"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87658856"
-                }
-            ],
-            "coord": {
-                "lat": "48.905629",
-                "lon": "7.208236"
-            },
-            "id": "stop_area:OCE:SA:87658856",
-            "label": "Adamswiller Lot. forêt. (Adamswiller)",
-            "links": [],
-            "name": "Adamswiller Lot. forêt.",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "48.9052331",
-                        "lon": "7.2036488"
-                    },
-                    "id": "admin:fr:67002",
-                    "insee": "67002",
-                    "label": "Adamswiller (67320)",
-                    "level": 8,
-                    "name": "Adamswiller",
-                    "zip_code": "67320"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-658922-HR"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87658922"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87658922"
-                }
-            ],
-            "coord": {
-                "lat": "48.903847",
-                "lon": "7.201171"
-            },
-            "id": "stop_area:OCE:SA:87658922",
-            "label": "Adamswiller-(Mairie). (Adamswiller)",
-            "links": [],
-            "name": "Adamswiller-(Mairie).",
-            "timezone": "Europe/Paris"
-        },
-        {
-            "administrative_regions": [
-                {
-                    "coord": {
-                        "lat": "48.9802035",
-                        "lon": "2.5589558"
-                    },
-                    "id": "admin:fr:93073",
-                    "insee": "93073",
-                    "label": "Tremblay-en-France (93290)",
-                    "level": 8,
-                    "name": "Tremblay-en-France",
-                    "zip_code": "93290"
-                }
-            ],
-            "codes": [
-                {
-                    "type": "CR-CI-CH",
-                    "value": "0087-001479-BV"
-                },
-                {
-                    "type": "UIC8",
-                    "value": "87001479"
-                },
-                {
-                    "type": "external_code",
-                    "value": "OCE87001479"
-                }
-            ],
-            "coord": {
-                "lat": "49.003605",
-                "lon": "2.571026"
-            },
-            "id": "stop_area:OCE:SA:87001479",
-            "label": "Aérop-C-de-Gaulle-2-TGV (Tremblay-en-France)",
-            "links": [],
-            "name": "Aérop-C-de-Gaulle-2-TGV",
-            "timezone": "Europe/Paris"
-        }
-    ]
+    "notes": [],
+    "tickets": []
 }
