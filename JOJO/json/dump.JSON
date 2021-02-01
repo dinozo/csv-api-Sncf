@@ -6,7 +6,7 @@
                 "value": 97091.1386812212
             }
         },
-        "current_datetime": "20210127T000207",
+        "current_datetime": "20210201T154740",
         "timezone": "Europe/Paris"
     },
     "disruptions": [],
@@ -14,19 +14,29 @@
     "feed_publishers": [],
     "journeys": [
         {
-            "arrival_date_time": "20210127T230900",
+            "arrival_date_time": "20210201T160900",
             "calendars": [
                 {
                     "active_periods": [
                         {
-                            "begin": "20210115",
-                            "end": "20210327"
+                            "begin": "20210121",
+                            "end": "20210328"
+                        }
+                    ],
+                    "exceptions": [
+                        {
+                            "datetime": "20210216",
+                            "type": "remove"
+                        },
+                        {
+                            "datetime": "20210217",
+                            "type": "remove"
                         }
                     ],
                     "week_pattern": {
                         "friday": true,
                         "monday": true,
-                        "saturday": false,
+                        "saturday": true,
                         "sunday": true,
                         "thursday": true,
                         "tuesday": true,
@@ -36,9 +46,9 @@
             ],
             "co2_emission": {
                 "unit": "gEC",
-                "value": 1338.9744
+                "value": 1355.2332
             },
-            "departure_date_time": "20210127T210000",
+            "departure_date_time": "20210201T135200",
             "distances": {
                 "bike": 0,
                 "car": 0,
@@ -46,13 +56,13 @@
                 "taxi": 0,
                 "walking": 0
             },
-            "duration": 7740,
+            "duration": 8220,
             "durations": {
                 "bike": 0,
                 "car": 0,
                 "ridesharing": 0,
                 "taxi": 0,
-                "total": 7740,
+                "total": 8220,
                 "walking": 0
             },
             "fare": {
@@ -64,28 +74,28 @@
             },
             "links": [
                 {
-                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&is_journey_schedules=True&datetime=20210127T230900&last_section_mode%5B%5D=walking&min_nb_journeys=5&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87722025&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87686006&from=stop_area%3AOCE%3ASA%3A87686006",
+                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&is_journey_schedules=True&datetime=20210201T160900&last_section_mode%5B%5D=walking&min_nb_journeys=5&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87722025&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87686006&from=stop_area%3AOCE%3ASA%3A87686006",
                     "rel": "same_journey_schedules",
                     "templated": false,
                     "type": "journeys"
                 },
                 {
-                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?count=1&first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&is_journey_schedules=True&datetime=20210127T230900&last_section_mode%5B%5D=walking&min_nb_journeys=1&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87722025&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87686006&from=stop_area%3AOCE%3ASA%3A87686006",
+                    "href": "https://api.sncf.com/v1/coverage/sncf/journeys?count=1&first_section_mode%5B%5D=walking&direct_path=none&to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&is_journey_schedules=True&datetime=20210201T160900&last_section_mode%5B%5D=walking&min_nb_journeys=1&min_nb_transfers=0&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87722025&allowed_id%5B%5D=stop_point%3AOCE%3ASP%3ATGVINOUI-87686006&from=stop_area%3AOCE%3ASA%3A87686006",
                     "rel": "this_journey",
                     "templated": false,
                     "type": "journeys"
                 }
             ],
             "nb_transfers": 0,
-            "requested_date_time": "20210127T235959",
+            "requested_date_time": "20210201T174259",
             "sections": [
                 {
-                    "arrival_date_time": "20210127T210000",
+                    "arrival_date_time": "20210201T135200",
                     "co2_emission": {
                         "unit": "",
                         "value": 0.0
                     },
-                    "departure_date_time": "20210127T210000",
+                    "departure_date_time": "20210201T135200",
                     "duration": 0,
                     "from": {
                         "embedded_type": "stop_area",
@@ -132,7 +142,7 @@
                             "timezone": "Europe/Paris"
                         }
                     },
-                    "id": "GQyxi8u6HXchnD6yk3MVWA_0",
+                    "id": "83SMZRfek3NTuRA2FEaaL5_0",
                     "links": [],
                     "mode": "walking",
                     "to": {
@@ -200,15 +210,15 @@
                     "additional_informations": [
                         "regular"
                     ],
-                    "arrival_date_time": "20210127T230900",
-                    "base_arrival_date_time": "20210127T230900",
-                    "base_departure_date_time": "20210127T210000",
+                    "arrival_date_time": "20210201T160900",
+                    "base_arrival_date_time": "20210201T160900",
+                    "base_departure_date_time": "20210201T135200",
                     "co2_emission": {
                         "unit": "gEC",
-                        "value": 1338.9744
+                        "value": 1355.2332
                     },
                     "data_freshness": "base_schedule",
-                    "departure_date_time": "20210127T210000",
+                    "departure_date_time": "20210201T135200",
                     "display_informations": {
                         "code": "",
                         "color": "000000",
@@ -216,16 +226,16 @@
                         "description": "",
                         "direction": "Lyon-Perrache (Lyon)",
                         "equipments": [],
-                        "headsign": "6633",
+                        "headsign": "6617",
                         "label": "Paris <> Lyon <> Saint Etienne",
                         "links": [],
                         "name": "Paris <> Lyon <> Saint Etienne",
                         "network": "SNCF",
                         "physical_mode": "Train grande vitesse",
                         "text_color": "FFFFFF",
-                        "trip_short_name": "6633"
+                        "trip_short_name": "6617"
                     },
-                    "duration": 7740,
+                    "duration": 8220,
                     "from": {
                         "embedded_type": "stop_point",
                         "id": "stop_point:OCE:SP:TGVINOUI-87686006",
@@ -292,6 +302,10 @@
                                 48.844922
                             ],
                             [
+                                4.499388,
+                                46.765309
+                            ],
+                            [
                                 4.859435,
                                 45.760585
                             ],
@@ -302,7 +316,7 @@
                         ],
                         "properties": [
                             {
-                                "length": 393816
+                                "length": 398598
                             }
                         ],
                         "type": "LineString"
@@ -310,7 +324,7 @@
                     "id": "section_0_0",
                     "links": [
                         {
-                            "id": "vehicle_journey:OCE:SN006633F37037_dst_1",
+                            "id": "vehicle_journey:OCE:SN006617F16016_dst_1",
                             "type": "vehicle_journey"
                         },
                         {
@@ -337,10 +351,10 @@
                     "stop_date_times": [
                         {
                             "additional_informations": [],
-                            "arrival_date_time": "20210127T210000",
-                            "base_arrival_date_time": "20210127T210000",
-                            "base_departure_date_time": "20210127T210000",
-                            "departure_date_time": "20210127T210000",
+                            "arrival_date_time": "20210201T135200",
+                            "base_arrival_date_time": "20210201T135200",
+                            "base_departure_date_time": "20210201T135200",
+                            "departure_date_time": "20210201T135200",
                             "links": [],
                             "stop_point": {
                                 "coord": {
@@ -359,10 +373,32 @@
                         },
                         {
                             "additional_informations": [],
-                            "arrival_date_time": "20210127T225600",
-                            "base_arrival_date_time": "20210127T225600",
-                            "base_departure_date_time": "20210127T230100",
-                            "departure_date_time": "20210127T230100",
+                            "arrival_date_time": "20210201T151300",
+                            "base_arrival_date_time": "20210201T151300",
+                            "base_departure_date_time": "20210201T151600",
+                            "departure_date_time": "20210201T151600",
+                            "links": [],
+                            "stop_point": {
+                                "coord": {
+                                    "lat": "46.765309",
+                                    "lon": "4.499388"
+                                },
+                                "equipments": [],
+                                "fare_zone": {
+                                    "name": "0"
+                                },
+                                "id": "stop_point:OCE:SP:TGVINOUI-87694109",
+                                "label": "Creusot - TGV (le) (Écuisses)",
+                                "links": [],
+                                "name": "Creusot - TGV (le)"
+                            }
+                        },
+                        {
+                            "additional_informations": [],
+                            "arrival_date_time": "20210201T155600",
+                            "base_arrival_date_time": "20210201T155600",
+                            "base_departure_date_time": "20210201T160100",
+                            "departure_date_time": "20210201T160100",
                             "links": [],
                             "stop_point": {
                                 "coord": {
@@ -381,10 +417,10 @@
                         },
                         {
                             "additional_informations": [],
-                            "arrival_date_time": "20210127T230900",
-                            "base_arrival_date_time": "20210127T230900",
-                            "base_departure_date_time": "20210127T230900",
-                            "departure_date_time": "20210127T230900",
+                            "arrival_date_time": "20210201T160900",
+                            "base_arrival_date_time": "20210201T160900",
+                            "base_departure_date_time": "20210201T160900",
+                            "departure_date_time": "20210201T160900",
                             "links": [],
                             "stop_point": {
                                 "coord": {
@@ -464,12 +500,12 @@
                     "type": "public_transport"
                 },
                 {
-                    "arrival_date_time": "20210127T230900",
+                    "arrival_date_time": "20210201T160900",
                     "co2_emission": {
                         "unit": "",
                         "value": 0.0
                     },
-                    "departure_date_time": "20210127T230900",
+                    "departure_date_time": "20210201T160900",
                     "duration": 0,
                     "from": {
                         "embedded_type": "stop_point",
@@ -530,7 +566,7 @@
                             }
                         }
                     },
-                    "id": "XjNAvKiWRWiKS2RSHyBvxH_0",
+                    "id": "cJhyFbKJVW5agmCC6VNUEn_0",
                     "links": [],
                     "mode": "walking",
                     "to": {
@@ -591,25 +627,25 @@
     ],
     "links": [
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210127T210001",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210201T135201",
             "rel": "next",
             "templated": false,
             "type": "next"
         },
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210127T230859",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210201T160859",
             "rel": "prev",
             "templated": false,
             "type": "prev"
         },
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210127T000000",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=departure&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210201T000000",
             "rel": "first",
             "templated": false,
             "type": "first"
         },
         {
-            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210127T235959",
+            "href": "https://api.sncf.com/v1/coverage/sncf/journeys?to=stop_area%3AOCE%3ASA%3A87722025&datetime_represents=arrival&from=stop_area%3AOCE%3ASA%3A87686006&datetime=20210201T235959",
             "rel": "last",
             "templated": false,
             "type": "last"

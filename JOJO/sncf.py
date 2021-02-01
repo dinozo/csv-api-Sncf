@@ -5,18 +5,37 @@ import time
 import pprint
 import datetime
 import os
+import logging
+import pathlib
+
+logfile = pathlib.Path(f'{os.getcwd()}/logs/logs.log')
+logging.basicConfig(filename=logfile, format='%(asctime)s: %(levelname)s: %(message)s', level=logging.DEBUG,
+                    datefmt='[%Y-%m-%d %H:%M:%S]')
+logging.info("Import of modules succeded")
 
 
 class Sncf:
     def __init__(self):
-        self.json_obj = ""
-        self.stops = ""
+        self.json_obj = None
+        self.stops = None
         self.headers = {"Authorization": "0157b284-3cc3-4799-a1ab-79dc2761d274"}
         self.links = []
         self.datetime_now = self.get_date() + self.get_hour()
         self.date_only = self.get_date()
+        self.options = {
+            "0": "0 - to exit and shut down the program",
+            "1": "1 - Call a method to read an API and save it into a  json file",
+            "2": "2 - Insert an stop area into a json saved file",
+            "3": "3 - Create a csv with all the gares / stop areas / codes etc. ",
+            "4": "4 - Read a CSV and print it in an organized dataframe ",
+            "5": "5 - Obtain the information for a Sample trajet, ex. Paris - Lyon",
+            "6": "6 - Check the trains between paris gare de lyon and lyon perrache between a defined interval of hours",
+            "7": "7 - Get the trains from paris et perpignan!",
+            "8": "8 - Get the trains from  paris to your own query destination",
+            "9": "9 - Get the trains from your destination to your own another destination"
+        }
 
-    def read_json(self, url, name="dump", mode="w+"):
+    def read_json_api(self, url, name="dump", mode="w+"):
         try:
             req = requests.get(url, headers=self.headers)
             json_object = json.loads(req.text)
@@ -27,9 +46,17 @@ class Sncf:
         except FileNotFoundError:
             print("Error trying to read file.JSON")
         except requests.exceptions.ConnectionError:
-            raise ConnectionError
             print("Url not valid, not found or user not connected to the internet")
-        # return pprint.pprint(self.json_obj)
+
+    def pprint_json(self, url):
+        req = requests.get(url, headers=self.headers)
+        obj = req.json()
+        pprint.pprint(obj)
+
+    def read_local_json(self, filename):
+        with open(f"json/{filename}.json", mode="r", encoding='utf-8') as file:
+            local = json.load(file)
+        return local
 
     def display_stops(self, json_obj):
         new_data = []
@@ -139,39 +166,51 @@ class Sncf:
 
         pass
 
-    def create_csv(self, data: dict, fichier: str) -> object:
+    @staticmethod
+    def create_csv(data: dict, fichier: str) -> object:
         info = pandas.DataFrame(data)
         f_name = fichier + ".csv"
         info.to_csv("csv/" + f_name)
         return info
 
-    def my_duration(self, seconds):
+    @staticmethod
+    def read_csv(csv_file):
+        result = pandas.read_csv(f"csv/{csv_file}.csv")
+        print(result)
+        return result
+
+    @staticmethod
+    def my_duration(seconds):
         a = str(datetime.timedelta(seconds=seconds))[0:7]
         return a
 
-    def format_datetime(self, datetime):
+    @staticmethod
+    def format_datetime(my_datetime):
         #         'year': depart[:4],
         #         'month': depart[4:6],
         #         'day': depart[6:8],
         #         'hour': depart[9:11],
         #         'minutes': depart[11:13],
         #         'seconds': depart[13:15]
-        time = f"{datetime[9:11]}h{datetime[11:13]}"
-        return time
+        my_time = f"{my_datetime[9:11]}h{my_datetime[11:13]}"
+        return my_time
 
-    def get_date(self, date=datetime.datetime.now().date()):
+    @staticmethod
+    def get_date(date=datetime.datetime.now().date()):
         d_date = str(date)
         split = d_date.split("-")
         f_date = "".join(split)
         return f_date + "T"
 
-    def get_hour(self, hour=datetime.datetime.now().time()):
+    @staticmethod
+    def get_hour(hour=datetime.datetime.now().time()):
         # Format Hour into HHMMSS
         split_h = str(hour)
         f_hour = split_h[:2] + split_h[3:5] + split_h[6:8]
         return f_hour
 
-    def get_attente(self, arrival, depart):
+    @staticmethod
+    def get_attente(arrival, depart):
         # process arrival 
         a = datetime.datetime.strptime(arrival, "%Hh%M")
         d = datetime.datetime.strptime(depart, "%Hh%M")
@@ -206,14 +245,16 @@ class Sncf:
                             my_attente.append(attente)
         # format date time
         print(f"There are {len(my_stops) - 1} stops")
-        my_new_data = {"Stops": my_stops, "arrival": my_arrivals, "departure": my_departs, "attente": my_attente}
+
+        my_new_data = {"Stops": my_stops,
+                       "arrival": my_arrivals,
+                       "departure": my_departs,
+                       "attente": my_attente}
         return my_new_data
 
     def get_all_journeys(self, api):
-        raw_data = self.read_json(api)
+        raw_data = self.read_json_api(api)
         my_section_list = []
-        sep = {"section": "----", "id": "----", "departure": "----", "arrival": "----", "duration": "----",
-               "from": "----", "to": "----", "type": "----", "tranfers": "----"}
         for journey in raw_data['journeys']:
             # ----- now divide and treat each section.
             for count, section in enumerate(journey['sections']):
@@ -238,42 +279,40 @@ class Sncf:
                     my_section_list.append(my_section)
             # ----  end of section
             break
-        # -------- END OF JOURNEY ----------
-        # # END OF FOR LOOP -------------
-        # section_df = pandas.DataFrame(my_section_list)
-        # left = pandas.DataFrame(trajet, index=[1])
-        # print(left)
-        # print(section_df)
         return my_section_list
 
-    def get_trains_datetime(self, start: str, stop: str, from_time: str, to_time=240000):
+    def get_trains_datetime(self, start: str, stop: str,
+                            from_time: str, to_time: str):
         datetime_query = self.get_date() + from_time
-        endpoint = f"https://api.sncf.com/v1/coverage/sncf/journeys?to={stop}&datetime_represents=departure&from={start}&datetime={datetime_query}"
-        raw_data = self.read_json(endpoint, name="trains-datetime")
+        endpoint = f"https://api.sncf.com/v1/coverage/sncf/journeys?to={stop}" \
+                   f"&datetime_represents=departure&from={start}&datetime={datetime_query}"
+        raw_data = self.read_json_api(endpoint, name="trains-datetime")
         links = [i['href'] for i in raw_data['links']]
+        #loop many times and change the time to get the first 2 trajets every hour..
         all_data = []
         for link in links:
             try:
                 datetime_query = int(link[-6::])
-                if int(from_time) < datetime_query < to_time:
+                if int(from_time) < datetime_query < int(to_time):
                     # FIX, the query is good, the function get_journey is NOT
                     data = self.get_all_journeys(api=link)
                     all_data.extend(data)
             except ValueError:
                 pass
         df = pandas.DataFrame(data for data in all_data)
-        print(df)
+        pprint.pprint(df)
+        return df
 
     def get_all_stop_areas(self):
         num = 1
         if os.path.isfile("json/all_stop_areas.JSON"):
-            print("exist")
-            with open("json/all_stop_areas.JSON") as file:
-                raw_data = json.load(file)
-            new_data = self.display_all_stops(raw_data)
+            print("All stop areas JSON already exist")
             if os.path.isfile("csv/all_stop_areas.csv"):
-                print("exist")
+                print("All stop areas csv already exist")
             else:
+                with open("json/all_stop_areas.JSON") as file:
+                    raw_data = json.load(file)
+                new_data = self.display_all_stops(raw_data)
                 df = pandas.DataFrame(new_data)
                 df.to_csv("csv/all_stop_areas.csv")
         else:
@@ -286,11 +325,10 @@ class Sncf:
             with open(filename, mode="a", encoding='utf-8') as data:
                 json.dump(all_request, data, sort_keys=True, indent=4, ensure_ascii=False)
 
-        # new_data = self.display_stops(raw_data)
-        # print(new_data)
-        # # self.create_csv(new_data,"all_stops")
-
-    def search_stop_area(self,gare):
+    def search_stop_area(self, gare):
         read = pandas.read_csv("csv/all_stop_areas.csv")
-        query = read[read["name"] == gare.capitalize()]
-        return query['id'].values[0]
+        try:
+            query = read[read["name"] == gare.capitalize()]
+            return query['id'].values[0]
+        except IndexError:
+            print(gare + " DOESNT EXIST! try to look for it in all_stop_areas.csv")
